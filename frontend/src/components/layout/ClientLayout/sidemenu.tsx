@@ -2,30 +2,67 @@ import { useRouter } from 'next/router';
 import { useState } from 'react';
 
 import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
-import { Collapse, Link, Stack } from '@mui/material';
+import { Box, Collapse, Drawer, Link, Stack } from '@mui/material';
 
+import { BreakpointChanger } from '@/components/functional';
 import { NAV_CONFIG, NavConfig, NavConfigItem } from '@/config';
 
 /**
  * 左メニュー
  */
-export const SideMenu = (props: {}) => {
+export const SideMenu = (props: {
+  isSideMenuOpen: boolean;
+  onCloseSideMenu: () => void;
+}) => {
   const { pathname } = useRouter();
 
   return (
-    <Stack
-      sx={{
-        borderRight: (theme) => `1px solid ${theme.palette.divider}`,
-        p: 1,
-        minWidth: '220px',
-      }}
-    >
-      {NAV_CONFIG.map((NavConfig, i) => {
-        return (
-          <SideMenuCategory key={i} NavConfig={NavConfig} pathname={pathname} />
-        );
-      })}
-    </Stack>
+    <Box component="nav">
+      <BreakpointChanger
+        smDown={
+          <Drawer open={props.isSideMenuOpen} onClose={props.onCloseSideMenu}>
+            <Stack
+              sx={(theme) => ({
+                borderRight: (theme) => `1px solid ${theme.palette.divider}`,
+                p: 1,
+                minWidth: '220px',
+                height: '100%',
+              })}
+            >
+              {NAV_CONFIG.map((NavConfig, i) => {
+                return (
+                  <SideMenuCategory
+                    key={i}
+                    NavConfig={NavConfig}
+                    pathname={pathname}
+                  />
+                );
+              })}
+            </Stack>
+          </Drawer>
+        }
+        smUp={
+          <Stack
+            sx={(theme) => ({
+              borderRight: (theme) => `1px solid ${theme.palette.divider}`,
+              p: 1,
+              minWidth: '220px',
+              height: '100%',
+            })}
+          >
+            {NAV_CONFIG.map((NavConfig, i) => {
+              return (
+                <SideMenuCategory
+                  key={i}
+                  NavConfig={NavConfig}
+                  pathname={pathname}
+                />
+              );
+            })}
+          </Stack>
+        }
+      />
+    </Box>
   );
 };
 
@@ -62,7 +99,7 @@ const SideMenuCategory = ({
           cursor: 'pointer',
 
           '&:hover': {
-            backgroundColor: '#f6f6f6',
+            backgroundColor: '#2855a30f',
           },
         }}
         direction="row"
@@ -122,7 +159,7 @@ const SideMenuItem = ({
         fontWeight: isIncludePath ? 'bold' : 'initial',
 
         '&:hover': {
-          backgroundColor: isIncludePath ? '#2855a326' : '#f6f6f6',
+          backgroundColor: isIncludePath ? '#2855a326' : '#2855a30f',
         },
         '&:before': {
           content: '""',

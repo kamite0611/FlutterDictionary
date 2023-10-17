@@ -79,8 +79,8 @@ declare module '@mui/material' {
 const PRIMARY = {
   lighter: '#C8FACD',
   light: '#c2d84e',
-  main: '#AD53F3',
-  dark: '#AD53F3',
+  main: '#2855A3',
+  dark: '#2855A3',
   darker: '#00584f',
 };
 const SECONDARY = {
@@ -153,8 +153,8 @@ const WHITE = {
 };
 
 const GRADIENTS = {
-  primary: createGradient('#5A8FDD', '#AE9FEA'),
-  secondary: createGradient(alpha('#5A8FDD', 0.2), alpha('#AE9FEA', 0.2)),
+  primary: createGradient('#2855A3', '#46D1FD'),
+  secondary: createGradient(alpha('#2855A3', 0.2), alpha('#46D1FD', 0.2)),
   info: createGradient(INFO.light, INFO.main),
   success: createGradient(SUCCESS.light, SUCCESS.main),
   warning: createGradient(WARNING.light, WARNING.main),
