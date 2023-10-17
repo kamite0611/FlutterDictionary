@@ -2,7 +2,6 @@ import Image from 'next/image';
 
 import { Link, Stack, styled } from '@mui/material';
 
-import { MainContainer } from '@/components/elements';
 import { HEADER_HEIGHT } from '@/config';
 
 type ClientLayoutHeaderProps = {};
@@ -16,13 +15,10 @@ const HeaderWrapper = styled(Stack)(({ theme }) => ({
 export const ClientLayoutHeader = (props: ClientLayoutHeaderProps) => {
   return (
     <HeaderWrapper>
-      <MainContainer
+      <Stack
         direction="row"
-        sx={{
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          maxWidth: '100%',
-        }}
+        alignItems="center"
+        sx={{ flexGrow: 1, padding: '16px' }}
       >
         <Link href="/">
           <Image
@@ -34,7 +30,7 @@ export const ClientLayoutHeader = (props: ClientLayoutHeaderProps) => {
             style={{ objectFit: 'contain' }}
           />
         </Link>
-      </MainContainer>
+      </Stack>
     </HeaderWrapper>
   );
 };

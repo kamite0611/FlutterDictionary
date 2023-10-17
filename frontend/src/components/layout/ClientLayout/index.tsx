@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 
 import { Divider, Stack } from '@mui/material';
 
+import { SideMenu } from './SideMenu';
 import { ClientLayoutHeader } from './header';
 
 type ClientLayoutProps = {
@@ -18,7 +19,10 @@ export const ClientLayout = (props: ClientLayoutProps) => {
       {headerMode === 'default' && <ClientLayoutHeader />}
 
       <Divider />
-      <Stack sx={{ flexGrow: 1 }}>{children}</Stack>
+      <Stack direction="row" sx={{ flexGrow: 1 }}>
+        <SideMenu />
+        <Stack sx={{ flexGrow: 1 }}>{children}</Stack>
+      </Stack>
     </Stack>
   );
 };
