@@ -1,4 +1,4 @@
-import { alpha } from '@mui/material/styles';
+import { PaletteOptions, alpha } from '@mui/material/styles';
 
 // ----------------------------------------------------------------------
 
@@ -202,6 +202,6 @@ const palette = {
     ...COMMON,
     mode: 'dark',
   },
-} as const;
+} as Record<string, PaletteOptions>;
 
 export default palette;

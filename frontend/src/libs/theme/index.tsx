@@ -1,18 +1,18 @@
-import { useMemo, ReactNode } from "react";
+import { useMemo, ReactNode } from 'react';
 
-import { CssBaseline } from "@mui/material";
+import { CssBaseline } from '@mui/material';
 import {
   createTheme,
   ThemeOptions,
   ThemeProvider as MUIThemeProvider,
-} from "@mui/material/styles";
+} from '@mui/material/styles';
 
-import breakpoints from "./breakpoints";
-import GlobalStyles from "./globalStyles";
-import componentsOverride from "./overrides";
-import palette from "./palette";
-import shadows, { customShadows } from "./shadows";
-import typography from "./typography";
+import breakpoints from './breakpoints';
+import GlobalStyles from './globalStyles';
+import componentsOverride from './overrides';
+import palette from './palette';
+import shadows, { customShadows } from './shadows';
+import typography from './typography';
 
 // ----------------------------------------------------------------------
 
@@ -20,9 +20,9 @@ type Props = {
   children: ReactNode;
 };
 
-export * from "./createEmotionCache";
-export * from "./utils";
-export * from "./CustomIcons";
+export * from './createEmotionCache';
+export * from './utils';
+export * from './CustomIcons';
 export default function ThemeProvider({ children }: Props) {
   // const { themeMode, themeDirection } = useSettings();
 
