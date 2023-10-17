@@ -1,6 +1,6 @@
 import { ReactNode, useState } from 'react';
 
-import { Divider, Stack } from '@mui/material';
+import { Box, Divider, Stack } from '@mui/material';
 
 import { ClientLayoutHeader } from './header';
 import { SideMenu } from './sidemenu';
@@ -37,7 +37,12 @@ export const ClientLayout = (props: ClientLayoutProps) => {
           isSideMenuOpen={openSideMenu}
           onCloseSideMenu={handleCloseSideMenu}
         />
-        <Stack sx={{ flexGrow: 1 }}>{children}</Stack>
+        <Box
+          component="main"
+          sx={{ flexGrow: '1', display: 'flex', flexDirection: 'column' }}
+        >
+          {children}
+        </Box>
       </Stack>
     </Stack>
   );

@@ -19,11 +19,11 @@ export const SideMenu = (props: {
   return (
     <Box component="nav">
       <BreakpointChanger
+        sx={{ height: '100%' }}
         smDown={
           <Drawer open={props.isSideMenuOpen} onClose={props.onCloseSideMenu}>
             <Stack
               sx={(theme) => ({
-                borderRight: (theme) => `1px solid ${theme.palette.divider}`,
                 p: 1,
                 minWidth: '220px',
                 height: '100%',
