@@ -7,7 +7,7 @@ type HeadProps = {
 };
 
 export const CustomHead = ({ config }: HeadProps) => {
-  const { title, description, keywords, imageUrl, url } = config;
+  const { title, imageUrl, url } = config;
 
   return (
     <Head>
@@ -18,11 +18,8 @@ export const CustomHead = ({ config }: HeadProps) => {
       <meta property="og:site_name" content={title} />
 
       {/* 説明 */}
-      <meta name="description" content={description} />
-      <meta property="og:description" content={description} />
 
       {/* その他 */}
-      <meta name="keywords" content={keywords} />
       <meta property="og:type" content="website" />
 
       {/* 画像 */}
