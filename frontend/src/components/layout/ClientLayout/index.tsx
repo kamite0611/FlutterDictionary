@@ -39,7 +39,12 @@ export const ClientLayout = (props: ClientLayoutProps) => {
         />
         <Box
           component="main"
-          sx={{ flexGrow: '1', display: 'flex', flexDirection: 'column' }}
+          sx={{
+            flexGrow: '1',
+            display: 'flex',
+            flexDirection: 'column',
+            overflow: 'hidden',
+          }}
         >
           {children}
         </Box>

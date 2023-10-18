@@ -40,6 +40,11 @@ export const NAV_CONFIG: NavConfig[] = [
         title: 'Button',
         link: '/components/Button',
       },
+      {
+        subTitle: 'INPUTS',
+        title: 'Modal',
+        link: '/components/Modal',
+      },
     ],
   },
 ];

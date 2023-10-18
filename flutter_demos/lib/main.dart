@@ -26,8 +26,9 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      // home: const MyHomePage(title: 'Flutter Demo Home Page'),
       routes: {
+        "/": (context) => const MyHomePage(title: 'Flutter Demo Home Page'),
         "/components/Button/BasicButton": (context) =>
             const ComponentsButtonBasicButton()
       },

@@ -1,75 +1,87 @@
-import { Highlight, themes } from 'prism-react-renderer';
+import { useState } from 'react';
 
-import { Stack, StackProps, styled } from '@mui/material';
+import { Button, Stack, StackProps, styled } from '@mui/material';
+
+import { PrismCode } from '@/libs/prism';
 
 type FlutterDemoProps = StackProps & {
   height?: number;
   path: string;
+  parentCode?: string;
+  code: string;
 };
 
 const StyledIframe = styled('iframe')(({ theme }) => ({
+  pointerEvents: 'none',
   border: 'none',
 }));
 
-const CodeBlock = `import 'package:flutter/material.dart';
-
-class ComponentsButtonBasicButton extends StatelessWidget {
-  const ComponentsButtonBasicButton({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        body: Center(
-      child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            TextButton(
-              onPressed: () {},
-              child: const Text("TextButton"),
-            ),
-            const SizedBox(
-              width: 10,
-            ),
-            OutlinedButton(
-              onPressed: () {},
-              child: const Text("OutlinedButton"),
-            ),
-            const SizedBox(
-              width: 10,
-            ),
-            ElevatedButton(
-              onPressed: () {},
-              child: const Text("ElevatedButton"),
-            ),
-          ]),
-    ));
-  }
-}`;
-
 export const FlutterDemo = (props: FlutterDemoProps) => {
-  const { path, height = 200, ...stackProps } = props;
+  const { path, height = 200, code, parentCode, ...stackProps } = props;
+  const [openAll, setOpenAll] = useState(false);
 
   const src = `http://localhost:5555/#${path}`;
+
+  /** 「ShowAllCode」押下時 */
+  const handleClickOpenAll = () => {
+    setOpenAll(true);
+  };
+
+  /** 「Expand Code」押下時 */
+  const handleClickCloseAll = () => {
+    setOpenAll(false);
+  };
+
   return (
     <Stack
-      sx={{ borderRadius: '10px', overflow: 'hidden', ...stackProps.sx }}
+      sx={{
+        borderRadius: '10px',
+        overflow: 'hidden',
+        border: (theme) => `1px solid ${theme.palette.divider}`,
+        ...stackProps.sx,
+      }}
       {...stackProps}
     >
       <StyledIframe src={src} height={height} />
-      <Highlight theme={themes.vsDark} code={CodeBlock} language="tsx">
-        {({ className, style, tokens, getLineProps, getTokenProps }) => (
-          <pre style={style}>
-            {tokens.map((line, i) => (
-              <div key={i} {...getLineProps({ line })}>
-                {line.map((token, key) => (
-                  <span key={key} {...getTokenProps({ token })} />
-                ))}
-              </div>
-            ))}
-          </pre>
-        )}
-      </Highlight>
+      <Stack>
+        <Stack
+          sx={{
+            padding: '10px',
+            borderTop: (theme) => `1px solid ${theme.palette.divider}`,
+          }}
+        >
+          {openAll && (
+            <Button
+              variant="outlined"
+              sx={{
+                fontSize: '10px',
+                width: '96px',
+                textTransform: 'none',
+                padding: '2px',
+              }}
+              onClick={handleClickCloseAll}
+            >
+              Expand Code
+            </Button>
+          )}
+          {parentCode && !openAll && (
+            <Button
+              variant="outlined"
+              sx={{
+                fontSize: '10px',
+                width: '96px',
+                textTransform: 'none',
+                padding: '2px',
+              }}
+              onClick={handleClickOpenAll}
+            >
+              Show All Code
+            </Button>
+          )}
+        </Stack>
+        {openAll && <PrismCode code={parentCode || ''} />}
+        {!openAll && <PrismCode code={code} />}
+      </Stack>
     </Stack>
   );
 };
