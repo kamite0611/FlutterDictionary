@@ -28,10 +28,12 @@ export const ClientLayout = (props: ClientLayoutProps) => {
   return (
     <Stack sx={{ height: '100%', minHeight: '100dvh' }}>
       {headerMode === 'default' && (
-        <ClientLayoutHeader onOpenSideMenu={handleOpenSideMenu} />
+        <Stack sx={{ position: 'sticky', top: 0, zIndex: 100 }}>
+          <ClientLayoutHeader onOpenSideMenu={handleOpenSideMenu} />
+          <Divider />
+        </Stack>
       )}
 
-      <Divider />
       <Stack direction="row" sx={{ flexGrow: 1 }}>
         <SideMenu
           isSideMenuOpen={openSideMenu}

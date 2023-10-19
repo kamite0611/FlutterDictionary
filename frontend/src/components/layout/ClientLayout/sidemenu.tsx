@@ -5,7 +5,7 @@ import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRound
 import { Box, Collapse, Drawer, Link, Stack } from '@mui/material';
 
 import { BreakpointChanger } from '@/components/functional';
-import { NAV_CONFIG, NavConfig, NavConfigItem } from '@/config';
+import { HEADER_HEIGHT, NAV_CONFIG, NavConfig, NavConfigItem } from '@/config';
 
 /**
  * 左メニュー
@@ -47,7 +47,10 @@ export const SideMenu = (props: {
               borderRight: (theme) => `1px solid ${theme.palette.divider}`,
               p: 1,
               minWidth: '220px',
-              height: '100%',
+              position: 'sticky',
+              top: `${HEADER_HEIGHT}px`,
+              height: `calc(100dvh - ${HEADER_HEIGHT}px)`,
+              overflow: 'scroll',
             })}
           >
             {NAV_CONFIG.map((NavConfig, i) => {

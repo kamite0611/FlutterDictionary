@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demos/views/widgets/Button/BasicButton.dart';
+import 'package:flutter_demos/views/widgets/Button/BasicElevatedButton.dart';
+import 'package:flutter_demos/views/widgets/Button/BasicOutlinedButton.dart';
+import 'package:flutter_demos/views/widgets/Button/BasicTextButton.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,6 +18,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        fontFamily: "NotoSansJP",
         // This is the theme of your application.
         //
         // Try running your application with "flutter run". You'll see the
@@ -41,6 +45,15 @@ const List<Route> routes = [
   Route(path: "/", widget: SizedBox()),
   Route(
       path: "/widgets/Button/BasicButton", widget: WidgetsButtonBasicButton()),
+  Route(
+      path: "/widgets/Button/BasicTextButton",
+      widget: WidgetsButtonBasicTextButton()),
+  Route(
+      path: "/widgets/Button/BasicOutlinedButton",
+      widget: WidgetsButtonBasicOutlinedButton()),
+  Route(
+      path: "/widgets/Button/BasicElevatedButton",
+      widget: WidgetsButtonBasicElevatedButton()),
 ];
 
 class MyHomePage extends StatelessWidget {
@@ -49,8 +62,6 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String path = Uri.base.queryParameters["path"] ?? "/";
-
-    print("path $path");
 
     final currentRoute = routes.firstWhere((element) => element.path == path);
 

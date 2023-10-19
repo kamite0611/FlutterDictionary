@@ -12,7 +12,7 @@ const CustomCodeBox = styled(Box)(({ theme }) => ({
   backgroundColor: '#1E1E1E',
   fontWeight: 600,
   letterSpacing: '0.5px',
-  fontSize: '13px',
+  fontSize: '11px',
   '& .maybe-class-name': {
     color: 'rgb(78, 201, 176)',
   },
