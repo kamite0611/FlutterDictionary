@@ -99,7 +99,7 @@ const SideMenuCategory = ({
           cursor: 'pointer',
 
           '&:hover': {
-            backgroundColor: '#2855a30f',
+            backgroundColor: (theme) => `${theme.palette.primary.main}0f`,
           },
         }}
         direction="row"
@@ -109,7 +109,7 @@ const SideMenuCategory = ({
       >
         <ArrowForwardIosRoundedIcon
           sx={{
-            color: '#2855A3',
+            color: (theme) => theme.palette.primary.main,
             fontSize: '10px',
             transform: open ? 'rotate(90deg)' : '',
           }}
@@ -153,13 +153,18 @@ const SideMenuItem = ({
         paddingLeft: 5,
         position: 'relative',
 
-        color: isIncludePath ? '#2855A3' : 'initial',
-        backgroundColor: isIncludePath ? '#2855a317' : 'initial',
+        color: (theme) =>
+          isIncludePath ? `${theme.palette.primary.main}` : 'initial',
+        backgroundColor: (theme) =>
+          isIncludePath ? `${theme.palette.primary.main}17` : 'initial',
 
         fontWeight: isIncludePath ? 'bold' : 'initial',
 
         '&:hover': {
-          backgroundColor: isIncludePath ? '#2855a326' : '#2855a30f',
+          backgroundColor: (theme) =>
+            isIncludePath
+              ? `${theme.palette.primary.main}26`
+              : `${theme.palette.primary.main}0f`,
         },
         '&:before': {
           content: '""',
@@ -171,7 +176,10 @@ const SideMenuItem = ({
           height: '100%',
           width: '1px',
           opacity: '1',
-          background: isIncludePath ? '#2855A3' : 'rgb(229, 234, 242)',
+          background: (theme) =>
+            isIncludePath
+              ? `${theme.palette.primary.main}`
+              : 'rgb(229, 234, 242)',
         },
       }}
     >

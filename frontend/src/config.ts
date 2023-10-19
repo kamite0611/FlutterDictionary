@@ -32,18 +32,18 @@ export type NavConfig = {
 
 export const NAV_CONFIG: NavConfig[] = [
   {
-    title: 'Components',
-    link: '/components',
+    title: 'Widgets',
+    link: '/widgets',
     items: [
       {
         subTitle: 'INPUTS',
         title: 'Button',
-        link: '/components/Button',
+        link: '/widgets/Button',
       },
       {
         subTitle: 'INPUTS',
         title: 'Modal',
-        link: '/components/Modal',
+        link: '/widgets/Modal',
       },
     ],
   },

@@ -45,7 +45,7 @@ export default function ButtonPage(props: ButtonPageProps) {
         </Typography>
 
         <Typography variant="body1">
-          ボタンWidgetはクリックを検知しユーザーからアクションを促すことができます。
+          ボタンWidgetはクリックを検知し、ユーザーからアクションを促すことができます。
         </Typography>
 
         <FlutterDemo

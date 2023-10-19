@@ -1,8 +1,7 @@
-export const WidgetsButtonBasic = {
-  parentCode: `import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
-class ComponentsButtonBasicButton extends StatelessWidget {
-  const ComponentsButtonBasicButton({Key? key}) : super(key: key);
+class WidgetsButtonBasicButton extends StatelessWidget {
+  const WidgetsButtonBasicButton({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -32,17 +31,4 @@ class ComponentsButtonBasicButton extends StatelessWidget {
           ]),
     );
   }
-}`,
-  code: `TextButton(
-  onPressed: () {},
-  child: const Text("TextButton"),
-),
-OutlinedButton(
-  onPressed: () {},
-  child: const Text("OutlinedButton"),
-),
-ElevatedButton(
-  onPressed: () {},
-  child: const Text("ElevatedButton"),
-),`,
-};
+}
