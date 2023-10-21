@@ -45,7 +45,6 @@ export const ClientLayout = (props: ClientLayoutProps) => {
             flexGrow: '1',
             display: 'flex',
             flexDirection: 'column',
-            overflow: 'hidden',
           }}
         >
           {children}

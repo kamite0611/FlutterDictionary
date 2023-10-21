@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, useEffect } from 'react';
 
 import { Stack, styled } from '@mui/material';
 
@@ -36,6 +36,15 @@ type PostWrapperProps = {
 };
 
 export const PostWrapper = ({ children }: PostWrapperProps) => {
+  useEffect(() => {
+    const urlHash = window.location.hash;
+    const urlID = decodeURI(urlHash);
+    const targetEl = window.document?.querySelector(urlID);
+    if (!targetEl) return;
+
+    window.scrollTo(targetEl.getBoundingClientRect());
+  }, []);
+
   return (
     <Stack direction="row">
       <StyledWrapper id="MainContent">{children}</StyledWrapper>

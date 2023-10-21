@@ -21,7 +21,7 @@ const typography = {
     fontWeight: 600,
     lineHeight: 1.4,
     letterSpacing: 0,
-    fontSize: pxToRem(18),
+    fontSize: pxToRem(20),
   },
   body1: {
     letterSpacing: pxToRem(0.3),

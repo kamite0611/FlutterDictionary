@@ -28,3 +28,8 @@ export const random = <T>(array: T[]): T => {
 export const isNumeric = (value: any): boolean => {
   return /^\d+(?:\.\d+)?$/.test(value);
 };
+
+/** スペースからハイフンにする */
+export const spaceToDashes = (text: string): string => {
+  return text.replace(/\s+/g, '-');
+};
