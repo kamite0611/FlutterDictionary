@@ -3,6 +3,8 @@ import 'package:flutter_demos/views/widgets/Button/BasicButton.dart';
 import 'package:flutter_demos/views/widgets/Button/BasicElevatedButton.dart';
 import 'package:flutter_demos/views/widgets/Button/BasicOutlinedButton.dart';
 import 'package:flutter_demos/views/widgets/Button/BasicTextButton.dart';
+import 'package:flutter_demos/views/widgets/Button/IconWithTextButton.dart';
+import 'package:flutter_demos/views/widgets/Button/SizeButton.dart';
 
 void main() {
   runApp(const MyApp());
@@ -54,6 +56,10 @@ const List<Route> routes = [
   Route(
       path: "/widgets/Button/BasicElevatedButton",
       widget: WidgetsButtonBasicElevatedButton()),
+  Route(path: "/widgets/Button/SizeButton", widget: WidgetsButtonSizeButton()),
+  Route(
+      path: "/widgets/Button/IconWithTextButton",
+      widget: WidgetsButtonIconWithTextButton()),
 ];
 
 class MyHomePage extends StatelessWidget {

@@ -1,7 +1,13 @@
-import { Typography, styled } from '@mui/material';
-import { Stack } from '@mui/system';
+import Link from 'next/link';
+import { useEffect } from 'react';
+
+import tocbot from 'tocbot';
+
+import { Typography } from '@mui/material';
 
 import { FlutterDemo } from '@/components/elements';
+import { PostTypography } from '@/components/elements/Post/PostSelectors';
+import { PostWrapper } from '@/components/elements/Post/PostWrapper';
 import { Page } from '@/components/functional';
 import {
   WidgetsButtonBasicButtonCode,
@@ -12,54 +18,42 @@ import {
   WidgetsButtonBasicOutlinedButtonPCode,
   WidgetsButtonBasicTextButtonCode,
   WidgetsButtonBasicTextButtonPCode,
+  WidgetsButtonIconWithTextButtonCode,
+  WidgetsButtonIconWithTextButtonPCode,
+  WidgetsButtonSizeButtonCode,
+  WidgetsButtonSizeButtonPCode,
 } from '@/constant/code/Widgets/Button';
 
 type ButtonPageProps = {};
 
-const StyledBody = styled(Stack)(({ theme }) => ({
-  padding: '40px 60px',
-  maxWidth: '800px',
-
-  '& li': {
-    margin: '16px 24px',
-  },
-
-  '& code': {
-    color: 'red',
-    fontSize: '13px',
-    backgroundColor: '#f6f6f6',
-    border: '1px solid #d2d2d2',
-    padding: '3px',
-    margin: '0 3px',
-    borderRadius: '4px',
-  },
-
-  [theme.breakpoints.down('lg')]: {
-    padding: '20px 30px',
-  },
-  [theme.breakpoints.down('sm')]: {
-    padding: '16px',
-  },
-}));
-
 export default function ButtonPage(props: ButtonPageProps) {
+  useEffect(() => {
+    tocbot.init({
+      tocSelector: '.toc',
+      contentSelector: '#MainContent',
+      headingSelector: 'h2, h3',
+    });
+
+    return () => tocbot.destroy();
+  }, []);
+
   return (
     <Page
       config={{
         title: 'Button Widgetのサンプル集 - Flutter図鑑',
       }}
     >
-      <StyledBody>
+      <PostWrapper>
         <Typography variant="h1">Button</Typography>
         <Typography mt={2} variant="body1">
           FlutterではさまざまなButton Widgetが提供されています。
           <br />
-          ここでは基本的なウィジェットの使用方法を紹介します。
+          ここではFlutterから提供されているボタンの基本的な使用法を紹介します。
         </Typography>
 
-        <Typography mt={5} variant="h2">
+        <PostTypography mt={5} variant="h2">
           基本的な使用方法
-        </Typography>
+        </PostTypography>
         <ul>
           <li>TextButton</li>
           <li>OutlinedButton</li>
@@ -80,9 +74,9 @@ export default function ButtonPage(props: ButtonPageProps) {
           code={WidgetsButtonBasicButtonCode}
         />
 
-        <Typography mt={8} variant="h3">
+        <PostTypography mt={8} variant="h3">
           TextButton Widget
-        </Typography>
+        </PostTypography>
         <Typography mt={1} variant="body1">
           TextButtonは<code>TextButton.styleFrom()</code>
           でスタイルの変更をすることができます。
@@ -99,9 +93,9 @@ export default function ButtonPage(props: ButtonPageProps) {
           code={WidgetsButtonBasicTextButtonCode}
         />
 
-        <Typography mt={8} variant="h3">
+        <PostTypography mt={8} variant="h3">
           OutlinedButton Widget
-        </Typography>
+        </PostTypography>
 
         <Typography mt={1} variant="body1">
           OutlinedButtonはデフォルトではアウトラインの色の変更はされない仕様になっています。
@@ -118,12 +112,12 @@ export default function ButtonPage(props: ButtonPageProps) {
           code={WidgetsButtonBasicOutlinedButtonCode}
         />
 
-        <Typography mt={8} variant="h3">
+        <PostTypography mt={8} variant="h3">
           ElevatedButton Widget
-        </Typography>
+        </PostTypography>
 
         <Typography mt={1} variant="body1">
-          OutlinedButtonは色合いが強く、重要度の高いアクションで使用するのに最も適しています。
+          ElevatedButtonは色合いが強く、重要度の高いアクションで使用するのに最も適しています。
         </Typography>
 
         <FlutterDemo
@@ -133,7 +127,81 @@ export default function ButtonPage(props: ButtonPageProps) {
           parentCode={WidgetsButtonBasicElevatedButtonPCode}
           code={WidgetsButtonBasicElevatedButtonCode}
         />
-      </StyledBody>
+
+        <PostTypography mt={8} variant="h2">
+          サイズの変更
+        </PostTypography>
+
+        <Typography mt={1} variant="body1">
+          ボタンのサイズを変更したい場合は、<code>fontSize</code>
+          の変更が有効です。
+          <br />
+          また、フォントのサイズを変更せずにボタンのサイズを変更したい場合は、
+          <code>EdgeInsets.symmetric</code>
+          の値を変更して対応することができます。
+        </Typography>
+
+        <FlutterDemo
+          mt={2}
+          path="/widgets/Button/SizeButton"
+          height={250}
+          parentCode={WidgetsButtonSizeButtonPCode}
+          code={WidgetsButtonSizeButtonCode}
+        />
+
+        <PostTypography mt={8} variant="h2">
+          アイコン付きのボタン
+        </PostTypography>
+
+        <Typography mt={1} variant="body1">
+          ボタンの意味をわかりやすくするために、アイコンをつけるのが有効です。
+          <br />
+          TextButton, OutlinedButton, ElevatedButton
+          全てにつけることができます。
+        </Typography>
+
+        <FlutterDemo
+          mt={2}
+          path="/widgets/Button/IconWithTextButton"
+          height={100}
+          parentCode={WidgetsButtonIconWithTextButtonPCode}
+          code={WidgetsButtonIconWithTextButtonCode}
+        />
+
+        <PostTypography mt={8} variant="h2">
+          API
+        </PostTypography>
+        <Typography mt={1} variant="body1">
+          ここで言及したWidgetの詳しい説明は以下の公式ドキュメントから参照してください。
+        </Typography>
+
+        <ul>
+          <li>
+            <Link
+              href="https://api.flutter.dev/flutter/material/ElevatedButton-class.html"
+              target="_blank"
+            >
+              ElevatedButton()
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="https://api.flutter.dev/flutter/material/OutlinedButton-class.html"
+              target="_blank"
+            >
+              OutlinedButton()
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="https://api.flutter.dev/flutter/material/TextButton-class.html"
+              target="_blank"
+            >
+              TextButton()
+            </Link>
+          </li>
+        </ul>
+      </PostWrapper>
     </Page>
   );
 }

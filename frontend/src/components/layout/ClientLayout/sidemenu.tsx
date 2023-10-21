@@ -81,9 +81,9 @@ const SideMenuCategory = ({
   NavConfig: NavConfig;
   pathname: string;
 }) => {
-  const isIncludePath = pathname.includes(NavConfig.link);
+  // const isIncludePath = pathname.includes(NavConfig.link);
 
-  const [open, setOpen] = useState(isIncludePath);
+  const [open, setOpen] = useState(true);
 
   /** Components等 カテゴリーがクリックされた時 */
   const handleClickCategory = () => {

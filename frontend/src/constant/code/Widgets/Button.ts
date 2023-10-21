@@ -204,3 +204,186 @@ export const WidgetsButtonBasicElevatedButtonCode = `ElevatedButton(
     style: TextStyle(color: Colors.white),
   ),
 ),`;
+
+export const WidgetsButtonSizeButtonPCode = `import 'package:flutter/material.dart';
+
+class WidgetsButtonSizeButton extends StatelessWidget {
+  const WidgetsButtonSizeButton({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+        child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              TextButton(
+                style: TextButton.styleFrom(
+                    textStyle: const TextStyle(fontSize: 12),
+                    padding:
+                        const EdgeInsets.symmetric(vertical: 0, horizontal: 8)),
+                onPressed: () {},
+                child: const Text("Small"),
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              TextButton(
+                style: TextButton.styleFrom(
+                    textStyle: const TextStyle(fontSize: 20),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 16, horizontal: 16)),
+                onPressed: () {},
+                child: const Text("Medium"),
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              TextButton(
+                style: TextButton.styleFrom(
+                    textStyle: const TextStyle(fontSize: 30),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 16, horizontal: 20)),
+                onPressed: () {},
+                child: const Text("Large"),
+              ),
+            ]),
+        const SizedBox(
+          height: 10,
+        ),
+        Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              OutlinedButton(
+                style: OutlinedButton.styleFrom(
+                    textStyle: const TextStyle(fontSize: 12),
+                    padding:
+                        const EdgeInsets.symmetric(vertical: 0, horizontal: 8)),
+                onPressed: () {},
+                child: const Text("Small"),
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              OutlinedButton(
+                style: OutlinedButton.styleFrom(
+                    textStyle: const TextStyle(fontSize: 20),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 16, horizontal: 16)),
+                onPressed: () {},
+                child: const Text("Medium"),
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              OutlinedButton(
+                style: OutlinedButton.styleFrom(
+                    textStyle: const TextStyle(fontSize: 30),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 16, horizontal: 20)),
+                onPressed: () {},
+                child: const Text("Large"),
+              ),
+            ]),
+        const SizedBox(
+          height: 10,
+        ),
+        Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    textStyle: const TextStyle(fontSize: 12),
+                    padding:
+                        const EdgeInsets.symmetric(vertical: 0, horizontal: 8)),
+                onPressed: () {},
+                child: const Text("Small"),
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    textStyle: const TextStyle(fontSize: 20),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 16, horizontal: 16)),
+                onPressed: () {},
+                child: const Text("Medium"),
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    textStyle: const TextStyle(fontSize: 30),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 16, horizontal: 20)),
+                onPressed: () {},
+                child: const Text("Large"),
+              ),
+            ]),
+      ],
+    ));
+  }
+}`;
+
+export const WidgetsButtonSizeButtonCode = `ElevatedButton(
+  style: ElevatedButton.styleFrom(
+      textStyle: const TextStyle(fontSize: 30),
+      padding: const EdgeInsets.symmetric(
+          vertical: 16, horizontal: 20)),
+  onPressed: () {},
+  child: const Text("Large"),
+),`;
+
+export const WidgetsButtonIconWithTextButtonPCode = `import 'package:flutter/material.dart';
+
+class WidgetsButtonIconWithTextButton extends StatelessWidget {
+  const WidgetsButtonIconWithTextButton({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            ElevatedButton.icon(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.download,
+                size: 16,
+              ),
+              label: const Text('Download'),
+            ),
+            const SizedBox(
+              width: 10,
+            ),
+            TextButton.icon(
+              onPressed: () {},
+              style: TextButton.styleFrom(foregroundColor: Colors.orange),
+              icon: const Icon(
+                Icons.add,
+                size: 16,
+              ),
+              label: const Text('Add'),
+            ),
+          ]),
+    );
+  }
+}`;
+
+export const WidgetsButtonIconWithTextButtonCode = `ElevatedButton.icon(
+  onPressed: () {},
+  icon: const Icon(
+    Icons.download,
+    size: 16,
+  ),
+  label: const Text('Download'),
+),`;

@@ -9,7 +9,7 @@ export type PageDynamicConfig = (params?: any) => PageConfig;
 export const HEADER_HEIGHT = 62;
 
 const ROOT_CONFIG = {
-  title: 'Flutter図鑑 - 触って理解するWidgetサンプル集',
+  title: 'Flutter図鑑 - 触って理解するFlutterWidgetサンプル集',
   imageUrl:
     'https://storage.googleapis.com/shishahrprod.appspot.com/public/LogoWithBG.png',
 };
@@ -39,11 +39,6 @@ export const NAV_CONFIG: NavConfig[] = [
         subTitle: 'INPUTS',
         title: 'Button',
         link: '/widgets/Button',
-      },
-      {
-        subTitle: 'INPUTS',
-        title: 'Modal',
-        link: '/widgets/Modal',
       },
     ],
   },
