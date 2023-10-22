@@ -6,6 +6,7 @@ import DragHandleRoundedIcon from '@mui/icons-material/DragHandleRounded';
 import TranslateRoundedIcon from '@mui/icons-material/TranslateRounded';
 import { Box, Button, Menu, MenuItem, Stack, styled } from '@mui/material';
 
+import { useLocale } from '@/common/hooks';
 import { BreakpointChanger } from '@/components/functional';
 import { HEADER_HEIGHT } from '@/config';
 
@@ -22,6 +23,10 @@ const HeaderWrapper = styled(Box)(({ theme }) => ({
 }));
 
 export const ClientLayoutHeader = (props: ClientLayoutHeaderProps) => {
+  const { locale, t } = useLocale();
+
+  const iconTitleURL = t.common.iconTitleURL;
+
   return (
     <HeaderWrapper component="header">
       <Stack
@@ -47,9 +52,9 @@ export const ClientLayoutHeader = (props: ClientLayoutHeaderProps) => {
         />
         <Link href="/">
           <Image
-            src="/images/Title.png"
+            src={iconTitleURL}
             alt={''}
-            width={140}
+            width={locale === 'ja' ? 144 : 183}
             height={33}
             priority
             style={{ objectFit: 'contain' }}

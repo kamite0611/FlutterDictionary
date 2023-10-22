@@ -7,6 +7,7 @@ import { CacheProvider } from '@emotion/react';
 
 import { Layout } from '@/components/layout';
 import Providers from '@/components/providers';
+import { GAScript } from '@/libs/GoogleAnalytics';
 import { createEmotionCache } from '@/libs/theme';
 
 // Client-side cache, shared for the whole session of the user in the browser.
@@ -27,6 +28,7 @@ export default function MyApp(props: MyAppProps) {
 
   return (
     <CacheProvider value={emotionCache}>
+      <GAScript />
       <Providers>{getLayout(<Component {...pageProps} />)}</Providers>
     </CacheProvider>
   );

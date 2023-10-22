@@ -1,6 +1,7 @@
 import { SmartButtonRounded } from '@mui/icons-material';
 import { Stack, Typography, styled } from '@mui/material';
 
+import { useLocale } from '@/common/hooks';
 import { Page } from '@/components/functional';
 import { CustomLink } from '@/components/parts';
 
@@ -17,10 +18,13 @@ const StyledWrapper = styled(Stack)(({ theme }) => ({
 }));
 
 export default function Home() {
+  const { t } = useLocale();
+  const body = t.TopPage;
+
   return (
     <Page
       config={{
-        title: 'Flutter図鑑 - 触って理解するFlutterサンプル集',
+        title: body.title,
       }}
     >
       <StyledWrapper>
@@ -43,12 +47,9 @@ export default function Home() {
               },
             })}
           >
-            Flutterをもっとシンプルに。
+            {body[0]}
           </Typography>
-          <Typography variant="body1">
-            Flutter図鑑は
-            Flutterから提供されているWidgetサンプルが集まった情報メディアです。
-          </Typography>
+          <Typography variant="body1">{body[1]}</Typography>
         </Stack>
 
         <Stack
@@ -64,7 +65,7 @@ export default function Home() {
               },
             })}
           >
-            Widget一覧
+            {body['2_head']}
           </Typography>
 
           <Stack

@@ -1,9 +1,17 @@
 const ja = {
   common: {
+    iconTitleURL: '/images/Title.png',
     api_desc:
       'さらに詳しく知りたい場合は、以下の公式ドキュメントから参照してください。',
   },
+  TopPage: {
+    title: 'Flutter図鑑 - 触って理解するFlutterWidgetサンプル集',
+    0: 'Flutterをもっとシンプルに。',
+    1: 'Flutter図鑑は Flutterから提供されているWidgetサンプルが集まった情報メディアです。',
+    '2_head': 'Widget一覧',
+  },
   WidgetButton: {
+    title: 'Flutter Button Widgetのサンプル集 - Flutter図鑑',
     0: (
       <>
         FlutterではさまざまなButton Widgetが提供されています。

@@ -1,9 +1,17 @@
 const en = {
   common: {
+    iconTitleURL: '/images/TitleEn.png',
     api_desc:
       'For further information, please refer to the official documentation below.',
   },
+  TopPage: {
+    title: 'FlutterDictionary - Flutter Widget Sample Collection',
+    0: 'Making Flutter simpler.',
+    1: 'FlutterDictionary is an informational media that gathers Widget samples provided by Flutter.',
+    '2_head': 'Widget samples',
+  },
   WidgetButton: {
+    title: 'Flutter button widget samples - FlutterDictionary',
     0: (
       <>
         Flutter offers a variety of Button Widgets.
