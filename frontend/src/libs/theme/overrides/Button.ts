@@ -14,6 +14,7 @@ export default function MyButton(theme: Theme) {
       disableRipple: false,
       styleOverrides: {
         root: {
+          textTransform: 'none',
           wordBreak: 'keep-all',
           borderRadius: '10px',
           boxShadow: 'none',

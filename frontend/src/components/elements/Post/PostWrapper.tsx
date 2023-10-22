@@ -39,6 +39,7 @@ export const PostWrapper = ({ children }: PostWrapperProps) => {
   useEffect(() => {
     const urlHash = window.location.hash;
     const urlID = decodeURI(urlHash);
+    if (!urlID) return;
     const targetEl = window.document?.querySelector(urlID);
     if (!targetEl) return;
 
@@ -47,7 +48,9 @@ export const PostWrapper = ({ children }: PostWrapperProps) => {
 
   return (
     <Stack direction="row">
-      <StyledWrapper id="MainContent">{children}</StyledWrapper>
+      <StyledWrapper id="MainContent" className="no-smooth-scroll">
+        {children}
+      </StyledWrapper>
       <PostTOC />
     </Stack>
   );

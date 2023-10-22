@@ -1,10 +1,8 @@
 import Link from 'next/link';
-import { useEffect } from 'react';
-
-import tocbot from 'tocbot';
 
 import { Typography } from '@mui/material';
 
+import { useLocale } from '@/common/hooks';
 import { FlutterDemo } from '@/components/elements';
 import { PostTypography } from '@/components/elements/Post/PostSelectors';
 import { PostWrapper } from '@/components/elements/Post/PostWrapper';
@@ -27,15 +25,10 @@ import {
 type ButtonPageProps = {};
 
 export default function ButtonPage(props: ButtonPageProps) {
-  useEffect(() => {
-    tocbot.init({
-      tocSelector: '.toc',
-      contentSelector: '#MainContent',
-      headingSelector: 'h2, h3',
-    });
+  const { t, locale } = useLocale();
+  console.log('locale', locale);
 
-    return () => tocbot.destroy();
-  }, []);
+  const body = t.WidgetButton;
 
   return (
     <Page
@@ -46,13 +39,11 @@ export default function ButtonPage(props: ButtonPageProps) {
       <PostWrapper>
         <Typography variant="h1">Button</Typography>
         <Typography mt={2} variant="body1">
-          FlutterではさまざまなButton Widgetが提供されています。
-          <br />
-          ここではFlutterから提供されているボタンの基本的な使用法を紹介します。
+          {body[0]}
         </Typography>
 
         <PostTypography mt={5} variant="h2">
-          基本的な使用方法
+          {body['1_head']}
         </PostTypography>
         <ul>
           <li>TextButton</li>
@@ -60,11 +51,7 @@ export default function ButtonPage(props: ButtonPageProps) {
           <li>ElevatedButton</li>
         </ul>
 
-        <Typography variant="body1">
-          Flutterからデフォルトで提供されているボタンには上記3つの種類があります。
-          <br />
-          ボタンWidgetはクリックを検知し、ユーザーからアクションを促すことができます。
-        </Typography>
+        <Typography variant="body1">{body[1]}</Typography>
 
         <FlutterDemo
           mt={2}
@@ -78,11 +65,7 @@ export default function ButtonPage(props: ButtonPageProps) {
           TextButton Widget
         </PostTypography>
         <Typography mt={1} variant="body1">
-          TextButtonは<code>TextButton.styleFrom()</code>
-          でスタイルの変更をすることができます。
-          <br />
-          また、無効化するには<code>onPressed</code>
-          にNULLを設定することで対応できます。
+          {body[2]}
         </Typography>
 
         <FlutterDemo
@@ -98,10 +81,7 @@ export default function ButtonPage(props: ButtonPageProps) {
         </PostTypography>
 
         <Typography mt={1} variant="body1">
-          OutlinedButtonはデフォルトではアウトラインの色の変更はされない仕様になっています。
-          <br />
-          変更したい場合は<code>OutlinedButton.styleForm</code>の
-          <code>side</code>を使用して対応することができます。
+          {body[3]}
         </Typography>
 
         <FlutterDemo
@@ -117,7 +97,7 @@ export default function ButtonPage(props: ButtonPageProps) {
         </PostTypography>
 
         <Typography mt={1} variant="body1">
-          ElevatedButtonは色合いが強く、重要度の高いアクションで使用するのに最も適しています。
+          {body[4]}
         </Typography>
 
         <FlutterDemo
@@ -129,16 +109,11 @@ export default function ButtonPage(props: ButtonPageProps) {
         />
 
         <PostTypography mt={8} variant="h2">
-          サイズの変更
+          {body['5_head']}
         </PostTypography>
 
         <Typography mt={1} variant="body1">
-          ボタンのサイズを変更したい場合は、<code>fontSize</code>
-          の変更が有効です。
-          <br />
-          また、フォントのサイズを変更せずにボタンのサイズを変更したい場合は、
-          <code>EdgeInsets.symmetric</code>
-          の値を変更して対応することができます。
+          {body[5]}
         </Typography>
 
         <FlutterDemo
@@ -150,14 +125,11 @@ export default function ButtonPage(props: ButtonPageProps) {
         />
 
         <PostTypography mt={8} variant="h2">
-          アイコン付きのボタン
+          {body['6_head']}
         </PostTypography>
 
         <Typography mt={1} variant="body1">
-          ボタンの意味をわかりやすくするために、アイコンをつけるのが有効です。
-          <br />
-          TextButton, OutlinedButton, ElevatedButton
-          全てにつけることができます。
+          {body[6]}
         </Typography>
 
         <FlutterDemo
@@ -172,7 +144,7 @@ export default function ButtonPage(props: ButtonPageProps) {
           API
         </PostTypography>
         <Typography mt={1} variant="body1">
-          ここで言及したWidgetの詳しい説明は以下の公式ドキュメントから参照してください。
+          {t.common.api_desc}
         </Typography>
 
         <ul>
