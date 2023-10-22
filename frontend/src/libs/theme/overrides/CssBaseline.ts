@@ -1,4 +1,4 @@
-import { Noto_Sans_JP } from 'next/font/google';
+import { Noto_Sans_JP, Source_Code_Pro } from 'next/font/google';
 
 import { Theme } from '@mui/material/styles';
 
@@ -13,6 +13,11 @@ const sans = Noto_Sans_JP({
   weight: ['100', '300', '400', '500', '700', '900'],
   subsets: ['latin'],
   display: 'swap',
+});
+
+export const FontSourceCode = Source_Code_Pro({
+  weight: '600',
+  subsets: ['latin'],
 });
 
 export const generateFontFamily = () => {

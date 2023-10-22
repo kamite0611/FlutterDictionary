@@ -2,14 +2,14 @@ import { useEffect } from 'react';
 
 import tocbot from 'tocbot';
 
-import { styled } from '@mui/material';
+import { Box, Stack, styled } from '@mui/material';
 
 import { useLocale } from '@/common/hooks';
 import { HEADER_HEIGHT } from '@/config';
 
 type PostTOCProps = {};
 
-const StyledNav = styled('nav')(({ theme }) => ({
+const StyledWrapper = styled(Box)(({ theme }) => ({
   position: 'sticky',
   top: `${HEADER_HEIGHT + 40}px`,
   minWidth: '300px',
@@ -17,23 +17,25 @@ const StyledNav = styled('nav')(({ theme }) => ({
   height: 'fit-content',
   padding: '0 16px',
 
+  [theme.breakpoints.down('lg')]: {
+    display: 'none',
+  },
+}));
+
+const StyledNav = styled(Stack)(({ theme }) => ({
   '& li': {
     listStyleType: 'none',
   },
   '& a': {
     textDecoration: 'none',
     display: 'block',
-    padding: '5px',
+    padding: '5px 0',
     fontSize: '13px',
     color: 'black',
   },
   '& .toc-list-item': {},
   '& .is-active-link': {
     fontWeight: 'bold',
-  },
-
-  [theme.breakpoints.down('lg')]: {
-    display: 'none',
   },
 }));
 
@@ -52,8 +54,11 @@ export const PostTOC = (props: PostTOCProps) => {
   }, [locale]);
 
   return (
-    <>
+    <StyledWrapper component="nav">
+      <Stack sx={{ color: 'gray', marginBottom: '8px', fontSize: '10px' }}>
+        CONTENTS
+      </Stack>
       <StyledNav className="toc" />
-    </>
+    </StyledWrapper>
   );
 };

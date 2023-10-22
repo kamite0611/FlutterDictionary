@@ -112,7 +112,7 @@ export const TranslateButton = () => {
             sx={{ padding: '10px 16px', width: '200px' }}
             onClick={handleClose}
           >
-            Japanese
+            日本語
           </MenuItem>
         </StyledLink>
       </Menu>

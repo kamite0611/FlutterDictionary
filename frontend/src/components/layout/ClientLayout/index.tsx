@@ -39,18 +39,20 @@ export const ClientLayout = (props: ClientLayoutProps) => {
           isSideMenuOpen={openSideMenu}
           onCloseSideMenu={handleCloseSideMenu}
         />
-        <Stack>
+        <Stack sx={{ flexGrow: 1 }}>
           <Box
             component="main"
-            sx={{
+            sx={(theme) => ({
               flexGrow: '1',
               display: 'flex',
               flexDirection: 'column',
-            }}
+              [theme.breakpoints.down('md')]: {
+                overflow: 'hidden',
+              },
+            })}
           >
             {children}
           </Box>
-          {/* <Stack sx={{ height: '400px' }}>hello footer</Stack> */}
         </Stack>
       </Stack>
     </Stack>

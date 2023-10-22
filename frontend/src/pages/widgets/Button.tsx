@@ -25,8 +25,7 @@ import {
 type ButtonPageProps = {};
 
 export default function ButtonPage(props: ButtonPageProps) {
-  const { t, locale } = useLocale();
-  console.log('locale', locale);
+  const { t } = useLocale();
 
   const body = t.WidgetButton;
 

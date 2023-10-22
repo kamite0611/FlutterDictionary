@@ -2,6 +2,8 @@ import { Highlight, themes } from 'prism-react-renderer';
 
 import { Box, styled } from '@mui/material';
 
+import { FontSourceCode } from './theme/overrides/CssBaseline';
+
 type PrismProps = {
   code: string;
   language?: string;
@@ -11,13 +13,18 @@ const CustomCodeBox = styled(Box)(({ theme }) => ({
   padding: '16px',
   backgroundColor: '#1E1E1E',
   fontWeight: 600,
-  letterSpacing: '0.5px',
-  fontSize: '11px',
+
   '& .maybe-class-name': {
     color: 'rgb(78, 201, 176)',
   },
   maxHeight: '500px',
   overflow: 'scroll',
+
+  '& pre': {
+    fontSize: '13px',
+    letterSpacing: 0,
+    fontFamily: FontSourceCode.style.fontFamily,
+  },
 }));
 
 export const PrismCode = ({ code, language = 'tsx' }: PrismProps) => {
