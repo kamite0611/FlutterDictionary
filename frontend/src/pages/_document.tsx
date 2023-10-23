@@ -23,10 +23,10 @@ export default function MyDocument({ emotionStyleTags }: MyDocumentProps) {
     <Html lang="ja">
       <Head>
         {/* PWA primary color */}
-        {/* <meta name="theme-color" content={theme.palette.primary.main} /> */}
-        {/* <link
+        {/* Generated https://realfavicongenerator.net/ */}
+        <link
           rel="apple-touch-icon"
-          sizes="180x180"
+          sizes="76x76"
           href="/apple-touch-icon.png"
         />
         <link
@@ -40,13 +40,14 @@ export default function MyDocument({ emotionStyleTags }: MyDocumentProps) {
           type="image/png"
           sizes="16x16"
           href="/favicon-16x16.png"
-        /> */}
-        {/* <link rel="manifest" href="/site.webmanifest" />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ad53f3" /> */}
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#2b5797" />
+        <meta name="theme-color" content="#ffffff" />
+
         <meta name="apple-mobile-web-app-title" content="FlutterGallery" />
         <meta name="application-name" content="FlutterGallery" />
-        <meta name="msapplication-TileColor" content="#ffffff" />
-        <meta name="theme-color" content="#ffffff" />
 
         <meta name="emotion-insertion-point" content="" />
 

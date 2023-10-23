@@ -2,6 +2,7 @@ import { CustomLink } from '@/components/parts';
 
 const en = {
   common: {
+    title: 'FlutterGallery',
     iconTitleURL: '/images/TitleEn.png',
     api_desc:
       'For further information, please refer to the official documentation below.',
@@ -24,7 +25,7 @@ const en = {
     '2_head': 'Widget samples',
   },
   WidgetButton: {
-    title: 'Flutter button widget samples - FlutterGallery',
+    title: 'Button Widget samples - FlutterGallery',
     0: (
       <>
         Flutter offers a variety of Button Widgets.

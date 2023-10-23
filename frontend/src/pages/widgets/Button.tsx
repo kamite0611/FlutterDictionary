@@ -32,7 +32,7 @@ export default function ButtonPage(props: ButtonPageProps) {
   return (
     <Page
       config={{
-        title: 'Button Widgetのサンプル集 - Flutter図鑑',
+        title: body.title,
       }}
     >
       <PostWrapper>

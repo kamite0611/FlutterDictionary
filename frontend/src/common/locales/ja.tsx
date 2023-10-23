@@ -2,6 +2,7 @@ import { CustomLink } from '@/components/parts';
 
 const ja = {
   common: {
+    title: 'Flutter図鑑',
     iconTitleURL: '/images/Title.png',
     api_desc:
       'さらに詳しく知りたい場合は、以下の公式ドキュメントから参照してください。',

@@ -43,7 +43,7 @@ export default function Home() {
             variant="h1"
             sx={(theme) => ({
               [theme.breakpoints.down('md')]: {
-                fontSize: '20px',
+                fontSize: '25px',
               },
             })}
           >
