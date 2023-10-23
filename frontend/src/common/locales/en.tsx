@@ -3,6 +3,8 @@ import { CustomLink } from '@/components/parts';
 const en = {
   common: {
     title: 'FlutterGallery',
+    ogImageURL:
+      'https://storage.googleapis.com/fluttergallery-f98c6.appspot.com/public/FlutterGalleryLogoWithBGEn.png',
     iconTitleURL: '/images/TitleEn.png',
     api_desc:
       'For further information, please refer to the official documentation below.',

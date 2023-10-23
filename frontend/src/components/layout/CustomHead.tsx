@@ -1,5 +1,6 @@
 import Head from 'next/head';
 
+import { useLocale } from '@/common/hooks';
 import { PageConfig } from '@/config';
 
 type HeadProps = {
@@ -7,7 +8,8 @@ type HeadProps = {
 };
 
 export const CustomHead = ({ config }: HeadProps) => {
-  const { title, imageUrl, url } = config;
+  const { t } = useLocale();
+  const { title, imageUrl = t.common.ogImageURL, url } = config;
 
   return (
     <Head>

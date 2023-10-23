@@ -3,6 +3,8 @@ import { CustomLink } from '@/components/parts';
 const ja = {
   common: {
     title: 'Flutter図鑑',
+    ogImageURL:
+      'https://storage.googleapis.com/fluttergallery-f98c6.appspot.com/public/FlutterGalleryLogoWithBG.png',
     iconTitleURL: '/images/Title.png',
     api_desc:
       'さらに詳しく知りたい場合は、以下の公式ドキュメントから参照してください。',
