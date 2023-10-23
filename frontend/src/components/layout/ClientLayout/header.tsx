@@ -53,7 +53,7 @@ export const ClientLayoutHeader = (props: ClientLayoutHeaderProps) => {
         <Link href="/">
           <Image
             src={iconTitleURL}
-            alt={''}
+            alt={t.common.title}
             width={locale === 'ja' ? 144 : 154}
             height={33}
             priority
