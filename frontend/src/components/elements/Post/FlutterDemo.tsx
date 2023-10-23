@@ -33,7 +33,7 @@ export const FlutterDemo = (props: FlutterDemoProps) => {
   const [copyHelperText, setCopyHelperText] = useState('copy the souce');
   const flutterDemoIframe = useRef<HTMLIFrameElement>(null);
 
-  const src = `http://localhost:5555?path=${path}`;
+  const src = `https://flutter-dictionary-flutterapp.vercel.app/?path=${path}`;
 
   /** 「ShowAllCode」押下時 */
   const handleClickOpenAll = () => {
