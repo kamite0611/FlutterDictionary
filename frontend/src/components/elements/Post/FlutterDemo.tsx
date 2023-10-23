@@ -26,6 +26,8 @@ const StyledIframe = styled('iframe')(({ theme }) => ({
   border: 'none',
 }));
 
+const DEMO_HOST = process.env.NEXT_PUBLIC_DEMO_HOST_URL || '';
+
 export const FlutterDemo = (props: FlutterDemoProps) => {
   const { path, height = 200, code, parentCode, ...stackProps } = props;
   const { copy } = useCopyToClipboard();
@@ -33,7 +35,7 @@ export const FlutterDemo = (props: FlutterDemoProps) => {
   const [copyHelperText, setCopyHelperText] = useState('copy the souce');
   const flutterDemoIframe = useRef<HTMLIFrameElement>(null);
 
-  const src = `https://flutter-dictionary-flutterapp.vercel.app/?path=${path}`;
+  const src = `${DEMO_HOST}/?path=${path}`;
 
   /** 「ShowAllCode」押下時 */
   const handleClickOpenAll = () => {
@@ -72,7 +74,14 @@ export const FlutterDemo = (props: FlutterDemoProps) => {
       }}
       {...stackProps}
     >
-      <StyledIframe src={src} height={height} ref={flutterDemoIframe} />
+      <StyledIframe
+        src={src}
+        height={height}
+        ref={flutterDemoIframe}
+        onLoad={() => {
+          console.log('onloaded');
+        }}
+      />
 
       <Stack>
         <Stack
