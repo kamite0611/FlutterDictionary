@@ -1,8 +1,21 @@
+import { CustomLink } from '@/components/parts';
+
 const ja = {
   common: {
     iconTitleURL: '/images/Title.png',
     api_desc:
       'さらに詳しく知りたい場合は、以下の公式ドキュメントから参照してください。',
+    footer: {
+      operation: (
+        <>
+          このサービスは
+          <CustomLink href="https://twitter.com/kamite0611" target="_blank">
+            @kamite0611
+          </CustomLink>
+          が運営しています
+        </>
+      ),
+    },
   },
   TopPage: {
     title: 'Flutter図鑑 - 触って理解するFlutterWidgetサンプル集',

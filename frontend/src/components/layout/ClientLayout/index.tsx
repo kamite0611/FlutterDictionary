@@ -2,6 +2,7 @@ import { ReactNode, useState } from 'react';
 
 import { Box, Divider, Stack } from '@mui/material';
 
+import { Footer } from './footer';
 import { ClientLayoutHeader } from './header';
 import { SideMenu } from './sidemenu';
 
@@ -61,6 +62,7 @@ export const ClientLayout = (props: ClientLayoutProps) => {
           </Box>
         </Stack>
       </Stack>
+      <Footer />
     </Stack>
   );
 };

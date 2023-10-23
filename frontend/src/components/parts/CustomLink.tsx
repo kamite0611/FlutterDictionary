@@ -1,14 +1,15 @@
 import Link, { LinkProps } from 'next/link';
 import { ReactNode } from 'react';
 
-import { StyledComponentProps, styled } from '@mui/material';
+import { SxProps, styled } from '@mui/material';
 
-type NoStyleProps = StyledComponentProps &
-  LinkProps & {
-    children: ReactNode;
-    noStyle?: boolean;
-    as?: any;
-  };
+type NoStyleProps = LinkProps & {
+  children?: ReactNode;
+  noStyle?: boolean;
+  as?: any;
+  sx?: SxProps;
+  target?: string;
+};
 
 const NoStyleLink = styled(Link)(({ theme }) => ({
   textDecoration: 'none',

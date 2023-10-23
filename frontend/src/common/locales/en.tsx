@@ -1,17 +1,30 @@
+import { CustomLink } from '@/components/parts';
+
 const en = {
   common: {
     iconTitleURL: '/images/TitleEn.png',
     api_desc:
       'For further information, please refer to the official documentation below.',
+
+    footer: {
+      operation: (
+        <>
+          This service is operated by
+          <CustomLink href="https://twitter.com/kamite0611" target="_blank">
+            @kamite0611
+          </CustomLink>
+        </>
+      ),
+    },
   },
   TopPage: {
-    title: 'FlutterDictionary - Flutter Widget Sample Collection',
+    title: 'FlutterGallery - Flutter Widget Sample Collection',
     0: 'Making Flutter simpler.',
-    1: 'FlutterDictionary is an informational media that gathers Widget samples provided by Flutter.',
+    1: 'FlutterGallery is an informational media that gathers Widget samples provided by Flutter.',
     '2_head': 'Widget samples',
   },
   WidgetButton: {
-    title: 'Flutter button widget samples - FlutterDictionary',
+    title: 'Flutter button widget samples - FlutterGallery',
     0: (
       <>
         Flutter offers a variety of Button Widgets.

@@ -54,7 +54,7 @@ export const ClientLayoutHeader = (props: ClientLayoutHeaderProps) => {
           <Image
             src={iconTitleURL}
             alt={''}
-            width={locale === 'ja' ? 144 : 183}
+            width={locale === 'ja' ? 144 : 154}
             height={33}
             priority
             style={{ objectFit: 'contain' }}

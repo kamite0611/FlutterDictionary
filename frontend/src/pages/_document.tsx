@@ -43,8 +43,8 @@ export default function MyDocument({ emotionStyleTags }: MyDocumentProps) {
         /> */}
         {/* <link rel="manifest" href="/site.webmanifest" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ad53f3" /> */}
-        <meta name="apple-mobile-web-app-title" content="FlutterDictionary" />
-        <meta name="application-name" content="FlutterDictionary" />
+        <meta name="apple-mobile-web-app-title" content="FlutterGallery" />
+        <meta name="application-name" content="FlutterGallery" />
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="theme-color" content="#ffffff" />
 
