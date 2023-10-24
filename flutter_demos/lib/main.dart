@@ -5,6 +5,10 @@ import 'package:flutter_demos/views/widgets/Button/BasicOutlinedButton.dart';
 import 'package:flutter_demos/views/widgets/Button/BasicTextButton.dart';
 import 'package:flutter_demos/views/widgets/Button/IconWithTextButton.dart';
 import 'package:flutter_demos/views/widgets/Button/SizeButton.dart';
+import 'package:flutter_demos/views/widgets/TextField/Basic.dart';
+import 'package:flutter_demos/views/widgets/TextField/Colors.dart';
+import 'package:flutter_demos/views/widgets/TextField/FormControl.dart';
+import 'package:flutter_demos/views/widgets/TextField/Validations.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,6 +41,7 @@ class Route {
 
 const List<Route> routes = [
   Route(path: "/", widget: SizedBox()),
+  // Buttons
   Route(
       path: "/widgets/Button/BasicButton", widget: WidgetsButtonBasicButton()),
   Route(
@@ -52,6 +57,16 @@ const List<Route> routes = [
   Route(
       path: "/widgets/Button/IconWithTextButton",
       widget: WidgetsButtonIconWithTextButton()),
+
+  // TextFields
+  Route(path: "/widgets/TextField/Basic", widget: WidgetsTextFieldBasic()),
+  Route(path: "/widgets/TextField/Colors", widget: WidgetsTextFieldColors()),
+  Route(
+      path: "/widgets/TextField/Validations",
+      widget: WidgetsTextFieldValidations()),
+  Route(
+      path: "/widgets/TextField/FormControl",
+      widget: WidgetsTextFieldFormControl()),
 ];
 
 class MyHomePage extends StatelessWidget {

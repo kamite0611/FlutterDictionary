@@ -89,6 +89,53 @@ const en = {
       </>
     ),
   },
+  WidgetTextField: {
+    0: (
+      <>
+        TextFiled can receive text information from the user.
+        <br />
+        Here are the basic methods of TextField provided by Flutter.
+      </>
+    ),
+    '1_head': 'Basic Usage',
+    1: (
+      <>
+        There are the above types of Text Field provided by Flutter.
+        <br />
+        TextField stretches to the full width, so if you want to specify the
+        size, use other widgets such as <code>SizedBox</code>.
+      </>
+    ),
+    2: (
+      <>
+        To specify the color of TextFiled, you can use{' '}
+        <code>OutlineInputBorder</code> or <code>OutlineInputBorder</code>.
+        <br />
+        You can also change the value of <code>focusedBorder</code> to specify
+        the color when focused.
+      </>
+    ),
+    3: (
+      <>
+        Displaying error text in a TextField can be handled using{' '}
+        <code>TextFormField</code>.
+        <br />
+        When used, it must be enclosed in a <code>Form()</code> and the{' '}
+        <code>formKey</code> must be set.
+        <br />
+        <br />
+        Validation can be created freely by changing the value of{' '}
+        <code>validator</code>.
+      </>
+    ),
+    '4_head': 'Form Control',
+    4: (
+      <>
+        <code>TextEditingController()</code> is best suited for retrieving or
+        changing input values.
+      </>
+    ),
+  },
 } as const;
 
 export default en;

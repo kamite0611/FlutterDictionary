@@ -5,7 +5,7 @@ import { PageConfig } from '@/config';
 import { CustomHead } from '../layout/CustomHead';
 
 type PageProps = {
-  children: ReactNode;
+  children?: ReactNode;
   config: PageConfig;
 };
 

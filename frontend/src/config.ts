@@ -30,6 +30,11 @@ export const NAV_CONFIG: NavConfig[] = [
         title: 'Button',
         link: '/widgets/Button',
       },
+      {
+        subTitle: 'INPUTS',
+        title: 'TextField',
+        link: '/widgets/TextField',
+      },
     ],
   },
 ];

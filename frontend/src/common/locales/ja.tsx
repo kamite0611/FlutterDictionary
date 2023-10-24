@@ -85,6 +85,54 @@ const ja = {
       </>
     ),
   },
+  WidgetTextField: {
+    0: (
+      <>
+        TextFiledはユーザーからのテキスト情報を受け取ることができます。
+        <br />
+        ここではFlutterから提供されているTextFieldの基本的な方法を紹介します。
+      </>
+    ),
+    '1_head': '基本的な使用方法',
+    1: (
+      <>
+        Flutterから提供されているText Fieldには上記種類があります。
+        <br />
+        TextFieldは横幅いっぱいに伸びるため、サイズを指定する場合は
+        <code>SizedBox</code>
+        など他のWidgetを使用して対応します。
+      </>
+    ),
+    2: (
+      <>
+        TextFiledの色を指定するためには<code>OutlineInputBorder</code>や
+        <code>OutlineInputBorder</code>で対応することができます。
+        <br />
+        また、<code>focusedBorder</code>
+        の値を変更してフォーカス時の色を指定することもできます。
+      </>
+    ),
+    3: (
+      <>
+        TextFieldでエラーテキストを表示するには<code>TextFormField</code>
+        を使用して対応することができます。
+        <br />
+        使用する際は必ず<code>Form()</code>で囲い、<code>formKey</code>
+        を設定しなければなりません。
+        <br />
+        <br />
+        <code>validator</code>
+        の値を組み換えれば自在にValidationを作成することができます。
+      </>
+    ),
+    '4_head': '入力値の操作',
+    4: (
+      <>
+        入力値を取得または変更するには<code>TextEditingController()</code>
+        が最も適しています。
+      </>
+    ),
+  },
 } as const;
 
 export default ja;

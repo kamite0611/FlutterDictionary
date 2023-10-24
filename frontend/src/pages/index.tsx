@@ -1,4 +1,4 @@
-import { SmartButtonRounded } from '@mui/icons-material';
+import { SmartButtonRounded, TextFormatRounded } from '@mui/icons-material';
 import { Stack, Typography, styled } from '@mui/material';
 
 import { useLocale } from '@/common/hooks';
@@ -75,6 +75,7 @@ export default function Home() {
               width: '100%',
               maxWidth: '800px',
               mt: '20px',
+              gap: '16px',
             }}
           >
             <CustomLink href="/widgets/Button" noStyle>
@@ -104,6 +105,36 @@ export default function Home() {
                   }}
                 >
                   Button
+                </Stack>
+              </Stack>
+            </CustomLink>
+            <CustomLink href="/widgets/TextField" noStyle>
+              <Stack
+                sx={{
+                  alignItems: 'center',
+                  border: '1px solid #E5EAF2',
+                  backgroundColor: '#F5F5F5',
+                  borderRadius: '10px',
+                }}
+              >
+                <TextFormatRounded
+                  sx={{
+                    padding: '10px',
+                    fontSize: '100px',
+                  }}
+                />
+                <Stack
+                  sx={{
+                    width: '100%',
+                    textAlign: 'center',
+                    backgroundColor: '#fff',
+                    padding: '10px',
+                    fontWeight: 'bold',
+                    borderBottomLeftRadius: '10px',
+                    borderBottomRightRadius: '10px',
+                  }}
+                >
+                  TextField
                 </Stack>
               </Stack>
             </CustomLink>

@@ -79,7 +79,6 @@ export const FlutterDemo = (props: FlutterDemoProps) => {
         height={height}
         ref={flutterDemoIframe}
         title="Flutter demo"
-        loading="lazy"
         onLoad={() => {
           console.log('onloaded');
         }}
