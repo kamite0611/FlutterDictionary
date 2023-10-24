@@ -86,6 +86,7 @@ const ja = {
     ),
   },
   WidgetTextField: {
+    title: 'Flutter TextFiled Widgetのサンプル集 - Flutter図鑑',
     0: (
       <>
         TextFiledはユーザーからのテキスト情報を受け取ることができます。

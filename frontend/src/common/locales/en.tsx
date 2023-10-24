@@ -90,6 +90,7 @@ const en = {
     ),
   },
   WidgetTextField: {
+    title: 'TextField Widget samples - FlutterGallery',
     0: (
       <>
         TextFiled can receive text information from the user.

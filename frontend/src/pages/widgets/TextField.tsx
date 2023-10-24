@@ -27,9 +27,7 @@ export default function TextFieldPage(props: TextFieldPageProps) {
   const body = t.WidgetTextField;
 
   return (
-    <Page
-      config={{ title: 'Flutter TextFiled Widgetのサンプル集 - Flutter図鑑' }}
-    >
+    <Page config={{ title: body.title }}>
       <PostWrapper>
         <Typography variant="h1">Text Field</Typography>
         <Typography mt={2} variant="body1">
