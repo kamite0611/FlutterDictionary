@@ -32,7 +32,7 @@ const StyledWrapper = styled(Stack)(({ theme }) => ({
     maxWidth: '100%',
   },
   [theme.breakpoints.down('sm')]: {
-    padding: '16px',
+    padding: '36px 16px',
   },
 }));
 
