@@ -25,6 +25,7 @@ const typography = {
   },
   body1: {
     letterSpacing: pxToRem(0.6),
+    lineHeight: 1.6,
     fontSize: pxToRem(15),
   },
 } as const;

@@ -98,12 +98,13 @@ export default function Home() {
                     }}
                   >
                     {Icon && (
-                      <Icon
-                        sx={{
-                          padding: '10px',
-                          fontSize: '100px',
-                        }}
-                      />
+                      <Stack sx={{ padding: '20px' }}>
+                        <Icon
+                          sx={{
+                            fontSize: '60px',
+                          }}
+                        />
+                      </Stack>
                     )}
                     <Stack
                       sx={{

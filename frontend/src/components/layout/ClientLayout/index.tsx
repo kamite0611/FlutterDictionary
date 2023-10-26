@@ -2,6 +2,8 @@ import { ReactNode, useState } from 'react';
 
 import { Box, Divider, Stack } from '@mui/material';
 
+import { HEADER_HEIGHT } from '@/config';
+
 import { Footer } from './footer';
 import { ClientLayoutHeader } from './header';
 import { SideMenu } from './sidemenu';
@@ -35,7 +37,10 @@ export const ClientLayout = (props: ClientLayoutProps) => {
         </Stack>
       )}
 
-      <Stack direction="row" sx={{ flexGrow: 1 }}>
+      <Stack
+        direction="row"
+        sx={{ flexGrow: 1, minHeight: `calc(100dvh - ${HEADER_HEIGHT}px)` }}
+      >
         <SideMenu
           isSideMenuOpen={openSideMenu}
           onCloseSideMenu={handleCloseSideMenu}

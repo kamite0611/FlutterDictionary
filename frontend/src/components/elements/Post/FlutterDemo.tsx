@@ -18,8 +18,8 @@ import { PrismCode } from '@/libs/prism';
 type FlutterDemoProps = StackProps & {
   height?: number;
   path: string;
-  parentCode?: string;
-  code: string;
+  parentCode: string;
+  code?: string;
 };
 
 const StyledIframe = styled('iframe')(({ theme }) => ({
@@ -122,11 +122,11 @@ export const FlutterDemo = (props: FlutterDemoProps) => {
               }}
               onClick={handleClickOpenAll}
             >
-              Show All Code
+              {code ? 'Show All Code' : 'Show Code'}
             </Button>
           )}
 
-          <Tooltip title={copyHelperText}>
+          <Tooltip title={copyHelperText} enterTouchDelay={0}>
             <IconButton
               onClick={handleClickCopy}
               sx={{
@@ -141,7 +141,7 @@ export const FlutterDemo = (props: FlutterDemoProps) => {
             </IconButton>
           </Tooltip>
 
-          <Tooltip title="reset demo">
+          <Tooltip title="reset demo" enterTouchDelay={0}>
             <IconButton
               onClick={handleClickReload}
               sx={{
@@ -155,7 +155,7 @@ export const FlutterDemo = (props: FlutterDemoProps) => {
           </Tooltip>
         </Stack>
         {openAll && <PrismCode code={parentCode || ''} />}
-        {!openAll && <PrismCode code={code} />}
+        {!openAll && code && <PrismCode code={code || ''} />}
       </Stack>
     </Stack>
   );
