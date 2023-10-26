@@ -26,6 +26,9 @@ const en = {
     1: 'FlutterGallery is an informational media that gathers Widget samples provided by Flutter.',
     '2_head': 'Widget samples',
   },
+
+  //////////////////////////////////////
+  // Button
   WidgetButton: {
     title: 'Button Widget Usage and Applications - FlutterGallery',
     0: (
@@ -89,6 +92,9 @@ const en = {
       </>
     ),
   },
+
+  //////////////////////////////////////
+  // TextField
   WidgetTextField: {
     title: 'TextField Widget Usage and Applications - FlutterGallery',
     0: (
@@ -134,6 +140,68 @@ const en = {
       <>
         <code>TextEditingController()</code> is best suited for retrieving or
         changing input values.
+      </>
+    ),
+  },
+
+  //////////////////////////////////////
+  // Select
+  WidgetSelect: {
+    title: 'Select Widget Usage and Applications - FlutterGallery',
+    0: (
+      <>
+        Flutter offers two types of Select Widgets.
+        <br />
+        The Select Widget is suitable for receiving information from a user's
+        choice of options.
+        <br />
+        <br />
+        Here we will show you how to use the Select Widget provided by Flutter.
+      </>
+    ),
+    '1_head': 'Basic Usage',
+    1: (
+      <>
+        There are the above types of Select Widgets provided by Flutter.
+        <br />
+        <code>DropdownMenu</code> allows text input and features the ability to
+        search for options.
+      </>
+    ),
+    2: (
+      <>
+        <code>DropdownButton</code> is useful when you want to create a general
+        selection field.
+        <br />
+        <br />
+        It can be deactivated by setting <code>onChange</code> to null.
+        <br />
+        If complex style changes are needed, enclose the field in a widget such
+        as <code>Container()</code> to achieve a wider range of styles.
+      </>
+    ),
+    3: (
+      <>
+        <code>DropdownMenu</code> allows retrieval of choices and is suited for
+        cases with a large number of choices.
+        <br />
+        Retrieving the selected data can be handled using{' '}
+        <code>TextEditingController()</code>.
+        <br />
+        <br />
+        It is a very easy-to-use widget, but since Disable and validation
+        settings cannot be set by default, it is a widget that must be devised
+        for use in forms.
+      </>
+    ),
+    4: (
+      <>
+        Validation of selected data can be handled using{' '}
+        <code>DropdownButtonFormField</code>.
+        <br />
+        The basic usage is not much different from <code>DropdownButton</code>,
+        but by enclosing it in <code>Form()</code>and specifying a{' '}
+        <code>validator</code>, you can freely set error messages.
       </>
     ),
   },

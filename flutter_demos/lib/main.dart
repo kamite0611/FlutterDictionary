@@ -8,6 +8,7 @@ import 'package:flutter_demos/views/widgets/Button/SizeButton.dart';
 import 'package:flutter_demos/views/widgets/Select/Basic.dart';
 import 'package:flutter_demos/views/widgets/Select/BasicDropdownButton.dart';
 import 'package:flutter_demos/views/widgets/Select/BasicDropdownMenu.dart';
+import 'package:flutter_demos/views/widgets/Select/Validation.dart';
 import 'package:flutter_demos/views/widgets/TextField/Basic.dart';
 import 'package:flutter_demos/views/widgets/TextField/Colors.dart';
 import 'package:flutter_demos/views/widgets/TextField/FormControl.dart';
@@ -79,6 +80,7 @@ const List<Route> routes = [
   Route(
       path: "/widgets/Select/BasicDropdownMenu",
       widget: WidgetsSelectBasicDropdownMenu()),
+  Route(path: "/widgets/Select/Validation", widget: WidgetsSelectValidation()),
 ];
 
 class MyHomePage extends StatelessWidget {

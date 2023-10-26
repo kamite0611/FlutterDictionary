@@ -1,4 +1,5 @@
 import {
+  HighlightAltRounded,
   SmartButtonRounded,
   SvgIconComponent,
   TextFormatRounded,
@@ -44,12 +45,12 @@ export const NAV_CONFIG: NavConfig[] = [
         link: '/widgets/TextField',
         icon: TextFormatRounded,
       },
-      // {
-      //   subTitle: 'INPUTS',
-      //   title: 'Select',
-      //   link: '/widgets/Select',
-      //   icon: HighlightAltRounded,
-      // },
+      {
+        subTitle: 'INPUTS',
+        title: 'Select',
+        link: '/widgets/Select',
+        icon: HighlightAltRounded,
+      },
     ],
   },
 ];

@@ -16,6 +16,8 @@ import {
   WidgetsSelectBasicDropdownMenuCode,
   WidgetsSelectBasicDropdownMenuPCode,
   WidgetsSelectBasicPCode,
+  WidgetsSelectValidationCode,
+  WidgetsSelectValidationPCode,
 } from '@/constant/code/Widgets/Select';
 
 type SelectPageProps = {};
@@ -23,35 +25,25 @@ type SelectPageProps = {};
 export default function SelectPage(props: SelectPageProps) {
   const { t } = useLocale();
 
+  const body = t.WidgetSelect;
+
   return (
-    <Page config={{ title: 'Select Widgetの使い方と応用例 - Flutter図鑑' }}>
+    <Page config={{ title: body.title }}>
       <PostWrapper>
         <Typography variant="h1">Select</Typography>
         <Typography mt={2} variant="body1">
-          Flutterでは二種類のSelect Widgetが提供されています。
-          <br />
-          Select
-          Widgetは選択肢の中からユーザーが選択した情報を受け取ることに適しています。
-          <br />
-          <br />
-          ここではFlutterから提供されているSelect
-          Widgetの使用方法をご紹介します。
+          {body[0]}
         </Typography>
 
         <PostTypography mt={5} variant="h2">
-          基本的な使用方法
+          {body['1_head']}
         </PostTypography>
         <ul>
           <li>DropdownButton</li>
           <li>DropdownMenu</li>
         </ul>
 
-        <Typography variant="body1">
-          Flutterから提供されているSelect Widgetには上記種類があります。
-          <br />
-          <code>DropdownMenu</code>
-          はテキスト入力が可能であり、選択肢の検索ができる特徴があります。
-        </Typography>
+        <Typography variant="body1">{body[1]}</Typography>
 
         <FlutterDemo
           mt={2}
@@ -66,15 +58,7 @@ export default function SelectPage(props: SelectPageProps) {
         </PostTypography>
 
         <Typography mt={2} variant="body1">
-          <code>DropdownButton</code>
-          は、一般的な選択フィールドを作成したい時に有効です。
-          <br />
-          <br />
-          <code>onChange</code>
-          をnullに設定することで非活性化させることができます。
-          <br />
-          複雑なスタイルの変更が必要な場合は<code>Container()</code>
-          などのWidgetで囲うとより幅広いスタイルを実現することができます。
+          {body[2]}
         </Typography>
 
         <FlutterDemo
@@ -90,14 +74,7 @@ export default function SelectPage(props: SelectPageProps) {
         </PostTypography>
 
         <Typography mt={2} variant="body1">
-          <code>DropdownMenu</code>
-          は選択肢の検索が可能であり、多数の選択肢がある場合に向いています。
-          <br />
-          選択されたデータを取得するには<code>TextEditingController()</code>
-          を使用して対応することができます。
-          <br />
-          <br />
-          非常に使いやすいWidgetですが、Disableやバリデーションの設定はデフォルトで設定できないため、フォームでの活用は工夫しなければならないWidgetです。
+          {body[3]}
         </Typography>
 
         <FlutterDemo
@@ -112,12 +89,18 @@ export default function SelectPage(props: SelectPageProps) {
           Validation
         </PostTypography>
 
+        <ul>
+          <li>DropdownButtonFormField</li>
+        </ul>
+
+        <Typography variant="body1">{body[4]}</Typography>
+
         <FlutterDemo
           mt={2}
-          path="/widgets/Select/BasicDropdownButton"
+          path="/widgets/Select/Validation"
           height={220}
-          parentCode={WidgetsSelectBasicDropdownButtonPCode}
-          code={WidgetsSelectBasicDropdownButtonCode}
+          parentCode={WidgetsSelectValidationPCode}
+          code={WidgetsSelectValidationCode}
         />
 
         <PostTypography mt={5} variant="h2">
@@ -135,6 +118,14 @@ export default function SelectPage(props: SelectPageProps) {
               target="_blank"
             >
               DropdownButton()
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="https://api.flutter.dev/flutter/material/DropdownButtonFormField-class.html"
+              target="_blank"
+            >
+              DropdownButtonFormField()
             </Link>
           </li>
           <li>

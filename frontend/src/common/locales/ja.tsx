@@ -134,6 +134,68 @@ const ja = {
       </>
     ),
   },
+
+  //////////////////////////////////////
+  // Select
+  WidgetSelect: {
+    title: 'Select Widgetの使い方と応用例 - Flutter図鑑',
+    0: (
+      <>
+        Flutterでは二種類のSelect Widgetが提供されています。
+        <br />
+        Select
+        Widgetは選択肢の中からユーザーが選択した情報を受け取ることに適しています。
+        <br />
+        <br />
+        ここではFlutterから提供されているSelect Widgetの使用方法をご紹介します。
+      </>
+    ),
+    '1_head': '基本的な使用方法',
+    1: (
+      <>
+        Flutterから提供されているSelect Widgetには上記種類があります。
+        <br />
+        <code>DropdownMenu</code>
+        はテキスト入力が可能であり、選択肢の検索ができる特徴があります。
+      </>
+    ),
+    2: (
+      <>
+        <code>DropdownButton</code>
+        は、一般的な選択フィールドを作成したい時に有効です。
+        <br />
+        <br />
+        <code>onChange</code>
+        をnullに設定することで非活性化させることができます。
+        <br />
+        複雑なスタイルの変更が必要な場合は<code>Container()</code>
+        などのWidgetで囲うとより幅広いスタイルを実現することができます。
+      </>
+    ),
+    3: (
+      <>
+        <code>DropdownMenu</code>
+        は選択肢の検索が可能であり、多数の選択肢がある場合に向いています。
+        <br />
+        選択されたデータを取得するには<code>TextEditingController()</code>
+        を使用して対応することができます。
+        <br />
+        <br />
+        非常に使いやすいWidgetですが、Disableやバリデーションの設定はデフォルトで設定できないため、フォームでの活用は工夫しなければならないWidgetです。
+      </>
+    ),
+    4: (
+      <>
+        選択されたデータの検証を行うためには
+        <code>DropdownButtonFormField</code>
+        を使用して対応することができます。
+        <br />
+        基本的な使用方法は<code>DropdownButton</code>とあまり変わりませんが、
+        <code>Form()</code>で囲み<code>validator</code>
+        を指定することで、自由にエラーメッセージを設定できます。
+      </>
+    ),
+  },
 } as const;
 
 export default ja;
