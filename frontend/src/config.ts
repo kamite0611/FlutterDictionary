@@ -1,3 +1,9 @@
+import {
+  SmartButtonRounded,
+  SvgIconComponent,
+  TextFormatRounded,
+} from '@mui/icons-material';
+
 export type PageConfig = {
   title: string;
   imageUrl?: string;
@@ -12,6 +18,7 @@ export type NavConfigItem = {
   subTitle?: string;
   title: string;
   link: string;
+  icon?: SvgIconComponent;
 };
 
 export type NavConfig = {
@@ -29,12 +36,20 @@ export const NAV_CONFIG: NavConfig[] = [
         subTitle: 'INPUTS',
         title: 'Button',
         link: '/widgets/Button',
+        icon: SmartButtonRounded,
       },
       {
         subTitle: 'INPUTS',
         title: 'TextField',
         link: '/widgets/TextField',
+        icon: TextFormatRounded,
       },
+      // {
+      //   subTitle: 'INPUTS',
+      //   title: 'Select',
+      //   link: '/widgets/Select',
+      //   icon: TextFormatRounded,
+      // },
     ],
   },
 ];

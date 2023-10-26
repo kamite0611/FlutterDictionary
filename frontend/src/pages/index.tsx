@@ -1,9 +1,9 @@
-import { SmartButtonRounded, TextFormatRounded } from '@mui/icons-material';
 import { Stack, Typography, styled } from '@mui/material';
 
 import { useLocale } from '@/common/hooks';
 import { Page } from '@/components/functional';
 import { CustomLink } from '@/components/parts';
+import { NAV_CONFIG } from '@/config';
 
 const StyledWrapper = styled(Stack)(({ theme }) => ({
   padding: '40px 60px',
@@ -20,6 +20,9 @@ const StyledWrapper = styled(Stack)(({ theme }) => ({
 export default function Home() {
   const { t } = useLocale();
   const body = t.TopPage;
+
+  const widgetConfig = NAV_CONFIG.find((config) => config.title == 'Widgets');
+  const widgetItems = widgetConfig!.items;
 
   return (
     <Page
@@ -78,66 +81,47 @@ export default function Home() {
               gap: '16px',
             }}
           >
-            <CustomLink href="/widgets/Button" noStyle>
-              <Stack
-                sx={{
-                  alignItems: 'center',
-                  border: '1px solid #E5EAF2',
-                  backgroundColor: '#F5F5F5',
-                  borderRadius: '10px',
-                }}
-              >
-                <SmartButtonRounded
-                  sx={{
-                    padding: '10px',
-                    fontSize: '100px',
-                  }}
-                />
-                <Stack
-                  sx={{
-                    width: '100%',
-                    textAlign: 'center',
-                    backgroundColor: '#fff',
-                    padding: '10px',
-                    fontWeight: 'bold',
-                    borderBottomLeftRadius: '10px',
-                    borderBottomRightRadius: '10px',
-                  }}
+            {widgetItems.map((widgetItem) => {
+              const Icon = widgetItem.icon;
+              return (
+                <CustomLink
+                  key={widgetItem.title}
+                  href={widgetItem.link}
+                  noStyle
                 >
-                  Button
-                </Stack>
-              </Stack>
-            </CustomLink>
-            <CustomLink href="/widgets/TextField" noStyle>
-              <Stack
-                sx={{
-                  alignItems: 'center',
-                  border: '1px solid #E5EAF2',
-                  backgroundColor: '#F5F5F5',
-                  borderRadius: '10px',
-                }}
-              >
-                <TextFormatRounded
-                  sx={{
-                    padding: '10px',
-                    fontSize: '100px',
-                  }}
-                />
-                <Stack
-                  sx={{
-                    width: '100%',
-                    textAlign: 'center',
-                    backgroundColor: '#fff',
-                    padding: '10px',
-                    fontWeight: 'bold',
-                    borderBottomLeftRadius: '10px',
-                    borderBottomRightRadius: '10px',
-                  }}
-                >
-                  TextField
-                </Stack>
-              </Stack>
-            </CustomLink>
+                  <Stack
+                    sx={{
+                      alignItems: 'center',
+                      border: '1px solid #E5EAF2',
+                      backgroundColor: '#F5F5F5',
+                      borderRadius: '10px',
+                    }}
+                  >
+                    {Icon && (
+                      <Icon
+                        sx={{
+                          padding: '10px',
+                          fontSize: '100px',
+                        }}
+                      />
+                    )}
+                    <Stack
+                      sx={{
+                        width: '100%',
+                        textAlign: 'center',
+                        backgroundColor: '#fff',
+                        padding: '10px',
+                        fontWeight: 'bold',
+                        borderBottomLeftRadius: '10px',
+                        borderBottomRightRadius: '10px',
+                      }}
+                    >
+                      {widgetItem.title}
+                    </Stack>
+                  </Stack>
+                </CustomLink>
+              );
+            })}
           </Stack>
         </Stack>
       </StyledWrapper>

@@ -27,7 +27,7 @@ const en = {
     '2_head': 'Widget samples',
   },
   WidgetButton: {
-    title: 'Button Widget samples - FlutterGallery',
+    title: 'Button Widget Usage and Applications - FlutterGallery',
     0: (
       <>
         Flutter offers a variety of Button Widgets.
@@ -90,12 +90,12 @@ const en = {
     ),
   },
   WidgetTextField: {
-    title: 'TextField Widget samples - FlutterGallery',
+    title: 'TextField Widget Usage and Applications - FlutterGallery',
     0: (
       <>
         TextFiled can receive text information from the user.
         <br />
-        Here are the basic methods of TextField provided by Flutter.
+        Here are some basic uses of TextField provided by Flutter.
       </>
     ),
     '1_head': 'Basic Usage',

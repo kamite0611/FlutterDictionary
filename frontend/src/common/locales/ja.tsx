@@ -27,12 +27,12 @@ const ja = {
     '2_head': 'Widget一覧',
   },
   WidgetButton: {
-    title: 'Flutter Button Widgetのサンプル集 - Flutter図鑑',
+    title: 'Flutter Button Widgetの使い方と応用例 - Flutter図鑑',
     0: (
       <>
         FlutterではさまざまなButton Widgetが提供されています。
         <br />
-        ここではFlutterから提供されているボタンの基本的な使用法を紹介します。
+        ここではFlutterから提供されているボタンの基本的な使用方法をご紹介します。
       </>
     ),
     '1_head': '基本的な使用方法',
@@ -86,12 +86,12 @@ const ja = {
     ),
   },
   WidgetTextField: {
-    title: 'Flutter TextFiled Widgetのサンプル集 - Flutter図鑑',
+    title: 'Flutter TextFiled Widgetの使い方と応用例 - Flutter図鑑',
     0: (
       <>
         TextFiledはユーザーからのテキスト情報を受け取ることができます。
         <br />
-        ここではFlutterから提供されているTextFieldの基本的な方法を紹介します。
+        ここではFlutterから提供されているTextFieldの基本的な使用方法をご紹介します。
       </>
     ),
     '1_head': '基本的な使用方法',
