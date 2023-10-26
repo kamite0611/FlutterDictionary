@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
 import { Box, Collapse, Drawer, Link, Stack } from '@mui/material';
@@ -15,6 +15,10 @@ export const SideMenu = (props: {
   onCloseSideMenu: () => void;
 }) => {
   const { pathname } = useRouter();
+
+  useEffect(() => {
+    props.onCloseSideMenu();
+  }, [pathname]);
 
   return (
     <Box component="nav">
