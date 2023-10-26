@@ -53,7 +53,7 @@ export const SideMenu = (props: {
               minWidth: '220px',
               position: 'sticky',
               top: `${HEADER_HEIGHT}px`,
-              height: `calc(100dvh - ${HEADER_HEIGHT}px)`,
+              height: `calc(100vh - ${HEADER_HEIGHT}px)`,
               overflow: 'scroll',
             })}
           >
