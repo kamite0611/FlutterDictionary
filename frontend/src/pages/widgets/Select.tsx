@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Typography } from '@mui/material';
 
 import { useLocale } from '@/common/hooks';
+import { getConfigByTitle } from '@/common/utils';
 import {
   FlutterDemo,
   PostTypography,
@@ -22,6 +23,8 @@ import {
 
 type SelectPageProps = {};
 
+const { prevConfig, nextConfig } = getConfigByTitle('Select') || {};
+
 export default function SelectPage(props: SelectPageProps) {
   const { t } = useLocale();
 
@@ -29,7 +32,7 @@ export default function SelectPage(props: SelectPageProps) {
 
   return (
     <Page config={{ title: body.title }}>
-      <PostWrapper>
+      <PostWrapper prevConfig={prevConfig} nextConfig={nextConfig}>
         <Typography variant="h1">Select</Typography>
         <Typography mt={2} variant="body1">
           {body[0]}

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Typography } from '@mui/material';
 
 import { useLocale } from '@/common/hooks';
+import { getConfigByTitle } from '@/common/utils';
 import { FlutterDemo } from '@/components/elements';
 import { PostTypography } from '@/components/elements/Post/PostSelectors';
 import { PostWrapper } from '@/components/elements/Post/PostWrapper';
@@ -24,6 +25,8 @@ import {
 
 type ButtonPageProps = {};
 
+const { prevConfig, nextConfig } = getConfigByTitle('Button') || {};
+
 export default function ButtonPage(props: ButtonPageProps) {
   const { t } = useLocale();
 
@@ -35,7 +38,7 @@ export default function ButtonPage(props: ButtonPageProps) {
         title: body.title,
       }}
     >
-      <PostWrapper>
+      <PostWrapper prevConfig={prevConfig} nextConfig={nextConfig}>
         <Typography variant="h1">Button</Typography>
         <Typography mt={2} variant="body1">
           {body[0]}

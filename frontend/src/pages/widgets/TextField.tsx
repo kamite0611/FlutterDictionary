@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Typography } from '@mui/material';
 
 import { useLocale } from '@/common/hooks';
+import { getConfigByTitle } from '@/common/utils';
 import {
   FlutterDemo,
   PostTypography,
@@ -22,13 +23,15 @@ import {
 
 type TextFieldPageProps = {};
 
+const { prevConfig, nextConfig } = getConfigByTitle('TextField') || {};
+
 export default function TextFieldPage(props: TextFieldPageProps) {
   const { t } = useLocale();
   const body = t.WidgetTextField;
 
   return (
     <Page config={{ title: body.title }}>
-      <PostWrapper>
+      <PostWrapper prevConfig={prevConfig} nextConfig={nextConfig}>
         <Typography variant="h1">Text Field</Typography>
         <Typography mt={2} variant="body1">
           {body[0]}

@@ -1,6 +1,10 @@
+import Link from 'next/link';
 import { ReactNode, useEffect } from 'react';
 
-import { Stack, styled } from '@mui/material';
+import { NavigateBefore, NavigateNext } from '@mui/icons-material';
+import { Box, Button, Divider, Stack, styled } from '@mui/material';
+
+import { NavConfigItem } from '@/config';
 
 import { PostTOC } from './PostTOC';
 
@@ -34,9 +38,15 @@ const StyledWrapper = styled(Stack)(({ theme }) => ({
 
 type PostWrapperProps = {
   children: ReactNode;
+  prevConfig?: NavConfigItem;
+  nextConfig?: NavConfigItem;
 };
 
-export const PostWrapper = ({ children }: PostWrapperProps) => {
+export const PostWrapper = ({
+  children,
+  prevConfig,
+  nextConfig,
+}: PostWrapperProps) => {
   useEffect(() => {
     const urlHash = window.location.hash;
     const urlID = decodeURI(urlHash);
@@ -51,6 +61,63 @@ export const PostWrapper = ({ children }: PostWrapperProps) => {
     <Stack direction="row">
       <StyledWrapper id="MainContent" className="no-smooth-scroll">
         {children}
+
+        {(prevConfig || nextConfig) && (
+          <>
+            <Divider sx={{ mt: 3 }} />
+
+            <Stack direction="row" py={3} justifyContent="space-between">
+              <Stack>
+                {prevConfig && (
+                  <>
+                    <Box
+                      sx={{
+                        fontSize: '13px',
+                        marginBottom: '6px',
+                        color: '#6d6d6d',
+                      }}
+                    >
+                      Previous
+                    </Box>
+                    <Link href={prevConfig.link}>
+                      <Button
+                        variant="outlined"
+                        sx={{ borderRadius: '10px' }}
+                        startIcon={<NavigateBefore />}
+                      >
+                        {prevConfig.title}
+                      </Button>
+                    </Link>
+                  </>
+                )}
+              </Stack>
+              <Stack sx={{ textAlign: 'end' }}>
+                {nextConfig && (
+                  <>
+                    <Box
+                      sx={{
+                        fontSize: '13px',
+                        marginBottom: '6px',
+                        color: '#6d6d6d',
+                      }}
+                    >
+                      Next
+                    </Box>
+                    <Link href={nextConfig.link}>
+                      <Button
+                        variant="outlined"
+                        sx={{ borderRadius: '10px' }}
+                        endIcon={<NavigateNext />}
+                      >
+                        {nextConfig.title}
+                      </Button>
+                    </Link>
+                  </>
+                )}
+              </Stack>
+            </Stack>
+          </>
+        )}
       </StyledWrapper>
       <PostTOC />
     </Stack>
