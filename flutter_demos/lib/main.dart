@@ -9,6 +9,10 @@ import 'package:flutter_demos/views/widgets/Select/Basic.dart';
 import 'package:flutter_demos/views/widgets/Select/BasicDropdownButton.dart';
 import 'package:flutter_demos/views/widgets/Select/BasicDropdownMenu.dart';
 import 'package:flutter_demos/views/widgets/Select/Validation.dart';
+import 'package:flutter_demos/views/widgets/Switch/Basic.dart';
+import 'package:flutter_demos/views/widgets/Switch/Label.dart';
+import 'package:flutter_demos/views/widgets/Switch/Color.dart';
+import 'package:flutter_demos/views/widgets/Switch/Icon.dart';
 import 'package:flutter_demos/views/widgets/TextField/Basic.dart';
 import 'package:flutter_demos/views/widgets/TextField/Colors.dart';
 import 'package:flutter_demos/views/widgets/TextField/FormControl.dart';
@@ -24,16 +28,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        useMaterial3: false,
-        fontFamily: "NotoSansJP",
-        primaryColor: Colors.blue,
-      ),
-      home: const MyHomePage(),
-    );
+    return const Material3App();
   }
 }
 
@@ -81,10 +76,16 @@ const List<Route> routes = [
       path: "/widgets/Select/BasicDropdownMenu",
       widget: WidgetsSelectBasicDropdownMenu()),
   Route(path: "/widgets/Select/Validation", widget: WidgetsSelectValidation()),
+
+  // Switch
+  Route(path: "/widgets/Switch/Basic", widget: WidgetsSwitchBasic()),
+  Route(path: "/widgets/Switch/Label", widget: WidgetsSwitchLabel()),
+  Route(path: "/widgets/Switch/Color", widget: WidgetsSwitchColor()),
+  Route(path: "/widgets/Switch/Icon", widget: WidgetsSwitchIcon()),
 ];
 
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+class Material3App extends StatelessWidget {
+  const Material3App({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -92,8 +93,16 @@ class MyHomePage extends StatelessWidget {
 
     final currentRoute = routes.firstWhere((element) => element.path == path);
 
-    return Scaffold(
-      body: currentRoute.widget,
-    );
+    return MaterialApp(
+        title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          useMaterial3: true,
+          fontFamily: "NotoSansJP",
+        ),
+        home: Scaffold(
+          backgroundColor: Colors.white,
+          body: currentRoute.widget,
+        ));
   }
 }

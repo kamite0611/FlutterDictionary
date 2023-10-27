@@ -205,6 +205,69 @@ const en = {
       </>
     ),
   },
+
+  //////////////////////////////////////
+  // Switch
+  WidgetSwitch: {
+    title: 'Switch Widgetの使い方と応用例 - Flutter図鑑',
+    0: (
+      <>
+        The Switch Widget is useful for getting a Boolean type (boolean{' '}
+        <code>true</code> or <code>false</code> value) from the user.
+        <br />
+        Here we explain how to use the Switch Widget provided by Flutter, and
+        give an example of its application.
+      </>
+    ),
+    '1_head': 'Basic Usage',
+    1: (
+      <>
+        <code>Switch</code> is useful if you want to create a general Switch
+        button.
+        <br />
+        You can get whether the button is checked or not by{' '}
+        <code>onChanged</code>.
+        <br />
+        <br />
+        You can also set the value of <code>onChanged</code> to Null to
+        deactivate the button.
+      </>
+    ),
+    '2_head': 'Labeled buttons',
+    2: (
+      <>
+        <code>SwitchListTile</code> is useful when you want to create a Switch
+        with a label.
+        <br />
+        You can change the value of the <code>title</code> or{' '}
+        <code>subtitle</code> and add a description of the Switch.
+        <br />
+        <br />
+        Also, by using <code>secondary</code>, a free widget such as an icon can
+        be displayed next to the label.
+      </>
+    ),
+    '3_head': 'Color Change',
+    3: (
+      <>
+        <code>activeTrackColor</code>: background color when value=true
+        <br />
+        <code>inactiveTrackColor</code>: background color when value=false
+        <br />
+        The Switch Widget allows you to specify colors in detail by changing
+        values such as
+      </>
+    ),
+    '4_head': 'Button with icon',
+    4: (
+      <>
+        Using <code>thumbIcon</code>, you can specify an icon within a button.
+        <br />
+        The icon can be changed depending on the button status, allowing for a
+        high degree of freedom in setting the icon.
+      </>
+    ),
+  },
 } as const;
 
 export default en;

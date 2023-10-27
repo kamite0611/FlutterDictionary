@@ -16,8 +16,6 @@ export const getConfigByTitle = (
       if (Category.items[j].title == title) {
         const currentConfig = Category.items[j];
 
-        console.log('currentConfig', currentConfig);
-
         const prevConfig = Category.items[j - 1];
         const nextConfig = Category.items[j + 1];
 

@@ -196,6 +196,67 @@ const ja = {
       </>
     ),
   },
+
+  //////////////////////////////////////
+  // Switch
+  WidgetSwitch: {
+    title: 'Switch Widgetの使い方と応用例 - Flutter図鑑',
+    0: (
+      <>
+        Switch Widgetは<code>true</code>または<code>false</code>
+        のBoolean型（真偽値）をユーザーから取得する場合に有効です。
+        <br />
+        ここではFlutterから提供されているSwitch
+        Widgetの使い方と応用例を解説します。
+      </>
+    ),
+    '1_head': '基本的な使用方法',
+    1: (
+      <>
+        <code>Switch</code>は一般的なSwitchボタンを作成したい場合に有効です。
+        <br />
+        <code>onChanged</code>でチェックされたどうかを取得することができます。
+        <br />
+        <br />
+        また、<code>onChanged</code>
+        の値をNullに設定すると、ボタンを非活性にすることができます。
+      </>
+    ),
+    '2_head': 'ラベル付きのボタン',
+    2: (
+      <>
+        <code>SwitchListTile</code>
+        はラベル付きのSwitchを作成したい場合に有効です。
+        <br />
+        <code>title</code>もしくは<code>subtitle</code>
+        の値を変更し、Switchの説明をつけることができます。
+        <br />
+        <br />
+        また、<code>secondary</code>
+        を使用することで、ラベルの横にアイコンなどの自由なWidgetを表示することができます。
+      </>
+    ),
+    '3_head': '色の変更',
+    3: (
+      <>
+        <code>activeTrackColor</code>: value=true の時の背景の色
+        <br />
+        <code>inactiveTrackColor</code>: value=false の時の背景の色
+        <br />
+        などの値を変更することで、Switch
+        Widgetでは細かく色を指定することができます。
+      </>
+    ),
+    '4_head': 'アイコン付きのボタン',
+    4: (
+      <>
+        <code>thumbIcon</code>
+        を使用することで、ボタン内のアイコンを指定することができます。
+        <br />
+        ボタンの状態によって変更できるため、自由度が高くアイコンを設定できます。
+      </>
+    ),
+  },
 } as const;
 
 export default ja;

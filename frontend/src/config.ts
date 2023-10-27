@@ -3,6 +3,7 @@ import {
   SmartButtonRounded,
   SvgIconComponent,
   TextFormatRounded,
+  ToggleOnRounded,
 } from '@mui/icons-material';
 
 export type PageConfig = {
@@ -51,12 +52,12 @@ export const NAV_CONFIG: NavConfig[] = [
         link: '/widgets/Select',
         icon: HighlightAltRounded,
       },
-      // {
-      //   subTitle: 'INPUTS',
-      //   title: 'Switch',
-      //   link: '/widgets/Switch',
-      //   icon: HighlightAltRounded,
-      // },
+      {
+        subTitle: 'INPUTS',
+        title: 'Switch',
+        link: '/widgets/Switch',
+        icon: ToggleOnRounded,
+      },
     ],
   },
 ];

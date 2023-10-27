@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 import { useLocale } from '@/common/hooks';
 import { PageConfig } from '@/config';
@@ -9,6 +10,7 @@ type HeadProps = {
 
 export const CustomHead = ({ config }: HeadProps) => {
   const { t } = useLocale();
+  const { locales, defaultLocale, asPath } = useRouter();
   const { title, imageUrl = t.common.ogImageURL, url } = config;
 
   return (
@@ -38,6 +40,18 @@ export const CustomHead = ({ config }: HeadProps) => {
           <meta property="og:url" content={url} />
         </>
       )}
+
+      {/* 多言語化 */}
+      {(locales || []).map((locale) => (
+        <link
+          key={`hreflang-${locale}`}
+          rel="alternate"
+          hrefLang={locale}
+          href={`https://www.flutter-gallery.com/${
+            locale === defaultLocale ? '' : '/' + locale
+          }${asPath}`}
+        />
+      ))}
 
       <meta
         name="viewport"
