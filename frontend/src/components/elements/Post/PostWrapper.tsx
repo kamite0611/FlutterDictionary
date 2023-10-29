@@ -10,7 +10,7 @@ import { PostTOC } from './PostTOC';
 
 const StyledWrapper = styled(Stack)(({ theme }) => ({
   padding: '40px 60px',
-  maxWidth: '800px',
+  maxWidth: '900px',
   width: '100%',
 
   '& li': {

@@ -55,6 +55,10 @@ export const SideMenu = (props: {
               top: `${HEADER_HEIGHT}px`,
               height: `calc(100vh - ${HEADER_HEIGHT}px)`,
               overflow: 'scroll',
+
+              [theme.breakpoints.up('lg')]: {
+                minWidth: '260px',
+              },
             })}
           >
             {NAV_CONFIG.map((NavConfig, i) => {
