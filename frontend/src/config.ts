@@ -1,4 +1,5 @@
 import {
+  CheckBoxRounded,
   HighlightAltRounded,
   SmartButtonRounded,
   SvgIconComponent,
@@ -57,6 +58,12 @@ export const NAV_CONFIG: NavConfig[] = [
         title: 'Switch',
         link: '/widgets/Switch',
         icon: ToggleOnRounded,
+      },
+      {
+        subTitle: 'INPUTS',
+        title: 'Checkbox',
+        link: '/widgets/Checkbox',
+        icon: CheckBoxRounded,
       },
     ],
   },

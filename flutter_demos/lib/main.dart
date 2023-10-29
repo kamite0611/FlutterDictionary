@@ -5,6 +5,10 @@ import 'package:flutter_demos/views/widgets/Button/BasicOutlinedButton.dart';
 import 'package:flutter_demos/views/widgets/Button/BasicTextButton.dart';
 import 'package:flutter_demos/views/widgets/Button/IconWithTextButton.dart';
 import 'package:flutter_demos/views/widgets/Button/SizeButton.dart';
+import 'package:flutter_demos/views/widgets/Checkbox/Basic.dart';
+import 'package:flutter_demos/views/widgets/Checkbox/Color.dart';
+import 'package:flutter_demos/views/widgets/Checkbox/Label.dart';
+import 'package:flutter_demos/views/widgets/Checkbox/Size.dart';
 import 'package:flutter_demos/views/widgets/Select/Basic.dart';
 import 'package:flutter_demos/views/widgets/Select/BasicDropdownButton.dart';
 import 'package:flutter_demos/views/widgets/Select/BasicDropdownMenu.dart';
@@ -82,6 +86,12 @@ const List<Route> routes = [
   Route(path: "/widgets/Switch/Label", widget: WidgetsSwitchLabel()),
   Route(path: "/widgets/Switch/Color", widget: WidgetsSwitchColor()),
   Route(path: "/widgets/Switch/Icon", widget: WidgetsSwitchIcon()),
+
+  // Checkbox
+  Route(path: "/widgets/Checkbox/Basic", widget: WidgetsCheckboxBasic()),
+  Route(path: "/widgets/Checkbox/Label", widget: WidgetsCheckboxLabel()),
+  Route(path: "/widgets/Checkbox/Color", widget: WidgetsCheckboxColor()),
+  Route(path: "/widgets/Checkbox/Validate", widget: WidgetsCheckboxValidate()),
 ];
 
 class Material3App extends StatelessWidget {

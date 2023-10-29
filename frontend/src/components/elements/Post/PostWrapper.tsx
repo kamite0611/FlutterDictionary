@@ -37,7 +37,7 @@ const StyledWrapper = styled(Stack)(({ theme }) => ({
 }));
 
 type PostWrapperProps = {
-  children: ReactNode;
+  children?: ReactNode;
   prevConfig?: NavConfigItem;
   nextConfig?: NavConfigItem;
 };

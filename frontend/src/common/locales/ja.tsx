@@ -257,6 +257,69 @@ const ja = {
       </>
     ),
   },
+
+  //////////////////////////////////////
+  // Checkbox
+  WidgetCheckbox: {
+    title: 'Checkbox Widgetの使い方と応用例 - Flutter図鑑',
+    0: (
+      <>
+        Checkbox
+        Widgetはユーザーから一つまたは複数の情報を選択させる場合に有効です。
+        <br />
+        ここではFlutterから提供されているCheckbox
+        Widgetの使い方と応用例を解説します。
+      </>
+    ),
+    '1_head': '基本的な使用方法',
+    1: (
+      <>
+        <code>Checkbox</code>は一般的なシンプルなチェックボックスのWidgetです。
+        <br />
+        <code>onChange</code>
+        の値をNullにすることで、フィールドを非活性にすることができます。
+      </>
+    ),
+    '2_head': 'ラベル付きのチェックボックス',
+    2: (
+      <>
+        <code>CheckboxListTile</code>
+        はラベル付きのCheckboxを作成したい場合に有効です。
+        <br />
+        <code>title</code>
+        を使用することで、Checkboxにラベルをつけることができます。
+        <br />
+        <br />
+        <code>Checkbox()</code>と同様に、
+        <code>onChange</code>
+        の値をNullにすることで、フィールドを非活性にすることができます。
+      </>
+    ),
+    '3_head': '色の変更',
+    3: (
+      <>
+        <code>activeColor</code>: value=true の時の背景の色
+        <br />
+        <code>hoverColor</code>: カーソルホバー時の背景の色
+        <br />
+        などの値を変更することで、Checkbox
+        Widgetでは細かく色を指定することができます。
+      </>
+    ),
+    4: (
+      <>
+        Checkbox Widgetで入力値の検証を行うためには<code>FormField</code>
+        を使用することで対応できます。
+        <br />
+        使用する<code>Form()</code>で囲い、<code>formKey</code>
+        を設定しなければならないことに注意してください。
+        <br />
+        <br />
+        <code>validator</code>
+        の値を組み換えれば自在にValidationを作成することができます。
+      </>
+    ),
+  },
 } as const;
 
 export default ja;

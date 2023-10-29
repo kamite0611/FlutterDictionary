@@ -56,7 +56,7 @@ export default function TextFieldPage(props: TextFieldPageProps) {
         />
 
         <PostTypography mt={8} variant="h2">
-          Color
+          Colors
         </PostTypography>
 
         <Typography variant="body1" mt={1}>

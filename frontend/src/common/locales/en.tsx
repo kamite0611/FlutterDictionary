@@ -209,7 +209,7 @@ const en = {
   //////////////////////////////////////
   // Switch
   WidgetSwitch: {
-    title: 'Switch Widgetの使い方と応用例 - Flutter図鑑',
+    title: 'Switch Widget Usage and Applications - FlutterGallery',
     0: (
       <>
         The Switch Widget is useful for getting a Boolean type (boolean{' '}
@@ -233,7 +233,7 @@ const en = {
         deactivate the button.
       </>
     ),
-    '2_head': 'Labeled buttons',
+    '2_head': 'Label',
     2: (
       <>
         <code>SwitchListTile</code> is useful when you want to create a Switch
@@ -247,7 +247,7 @@ const en = {
         be displayed next to the label.
       </>
     ),
-    '3_head': 'Color Change',
+    '3_head': 'Colors',
     3: (
       <>
         <code>activeTrackColor</code>: background color when value=true
@@ -265,6 +265,69 @@ const en = {
         <br />
         The icon can be changed depending on the button status, allowing for a
         high degree of freedom in setting the icon.
+      </>
+    ),
+  },
+
+  //////////////////////////////////////
+  // Checkbox
+  WidgetCheckbox: {
+    title: 'Checkbox Widget Usage and Applications - FlutterGallery',
+    0: (
+      <>
+        Checkbox Widget is useful when you want the user to select one or more
+        pieces of information.
+        <br />
+        Here we explain how to use the Checkbox Widget provided by Flutter and
+        some examples of its applications.
+      </>
+    ),
+    '1_head': 'Basic Usage',
+    1: (
+      <>
+        <code>Checkbox</code> is a generic simple checkbox widget.
+        <br />
+        The field can be deactivated by setting the value of{' '}
+        <code>onChange</code> to null.
+      </>
+    ),
+    '2_head': 'Label',
+    2: (
+      <>
+        <code>CheckboxListTile</code> is useful when you want to create a
+        Checkbox with a label.
+        <br />
+        By using <code>title</code>, you can label a Checkbox.
+        <br />
+        <br />
+        As with <code>Checkbox()</code>, the field can be deactivated by setting
+        the value of <code>onChange</code> to null.
+      </>
+    ),
+    '3_head': 'Colors',
+    3: (
+      <>
+        <code>activeColor</code>: the background color when value=true
+        <br />
+        <code>hoverColor</code>: the background color when the cursor is
+        hovering
+        <br />
+        <br />
+        Checkbox Widget allows you to specify colors in detail by changing
+        values such as
+      </>
+    ),
+    4: (
+      <>
+        The Checkbox Widget can handle input value validation by using a{' '}
+        <code>FormField</code>.
+        <br />
+        Note that it must be enclosed in a <code>Form()</code> to be used and
+        the <code>formKey</code> must be set.
+        <br />
+        <br />
+        You can freely create validation by changing the value of{' '}
+        <code>validator</code>.
       </>
     ),
   },
