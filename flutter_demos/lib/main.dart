@@ -13,6 +13,9 @@ import 'package:flutter_demos/views/widgets/Select/Basic.dart';
 import 'package:flutter_demos/views/widgets/Select/BasicDropdownButton.dart';
 import 'package:flutter_demos/views/widgets/Select/BasicDropdownMenu.dart';
 import 'package:flutter_demos/views/widgets/Select/Validation.dart';
+import 'package:flutter_demos/views/widgets/Slider/Basic.dart';
+import 'package:flutter_demos/views/widgets/Slider/Color.dart';
+import 'package:flutter_demos/views/widgets/Slider/Stepwise.dart';
 import 'package:flutter_demos/views/widgets/Switch/Basic.dart';
 import 'package:flutter_demos/views/widgets/Switch/Label.dart';
 import 'package:flutter_demos/views/widgets/Switch/Color.dart';
@@ -92,6 +95,11 @@ const List<Route> routes = [
   Route(path: "/widgets/Checkbox/Label", widget: WidgetsCheckboxLabel()),
   Route(path: "/widgets/Checkbox/Color", widget: WidgetsCheckboxColor()),
   Route(path: "/widgets/Checkbox/Validate", widget: WidgetsCheckboxValidate()),
+
+  // Slider
+  Route(path: "/widgets/Slider/Basic", widget: WidgetsSliderBasic()),
+  Route(path: "/widgets/Slider/Stepwise", widget: WidgetsSliderStepwise()),
+  Route(path: "/widgets/Slider/Color", widget: WidgetsSliderColor()),
 ];
 
 class Material3App extends StatelessWidget {

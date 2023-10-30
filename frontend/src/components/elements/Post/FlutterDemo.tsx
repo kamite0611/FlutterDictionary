@@ -29,7 +29,8 @@ const StyledIframe = styled('iframe')(({ theme }) => ({
 const DEMO_HOST = process.env.NEXT_PUBLIC_DEMO_HOST_URL || '';
 
 export const FlutterDemo = (props: FlutterDemoProps) => {
-  const { path, height = 200, code, parentCode, ...stackProps } = props;
+  const { path, height = 200, code, parentCode, title, ...stackProps } = props;
+
   const { copy } = useCopyToClipboard();
   const [openAll, setOpenAll] = useState(false);
   const [copyHelperText, setCopyHelperText] = useState('copy the souce');
@@ -78,7 +79,8 @@ export const FlutterDemo = (props: FlutterDemoProps) => {
         src={src}
         height={height}
         ref={flutterDemoIframe}
-        title="Flutter demo"
+        title={title ? title : 'Preview of Flutter Application'}
+        name={title ? title : 'Preview of Flutter Application'}
       />
 
       <Stack>
