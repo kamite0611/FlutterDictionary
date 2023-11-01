@@ -259,13 +259,13 @@ class _WidgetsCheckboxValidateState extends State<WidgetsCheckboxValidate> {
                   return SizedBox(
                     width: 300,
                     child: CheckboxListTile(
-                        title: const Text("Agree Terms os Service"),
+                        title: const Text("Agree Terms of Service"),
                         subtitle: state.hasError
                             ? Text(
                                 state.errorText!,
                                 style: const TextStyle(color: Colors.red),
                               )
-                            : const SizedBox(),
+                            : null,
                         value: state.value,
                         onChanged: (val) {
                           state.didChange(val);
@@ -290,13 +290,13 @@ export const WidgetsCheckboxValidateCode = `FormField(
     return SizedBox(
       width: 300,
       child: CheckboxListTile(
-          title: const Text("Agree Terms os Service"),
+          title: const Text("Agree Terms of Service"),
           subtitle: state.hasError
               ? Text(
                   state.errorText!,
                   style: const TextStyle(color: Colors.red),
                 )
-              : const SizedBox(),
+              : null
           value: state.value,
           onChanged: (val) {
             state.didChange(val);
