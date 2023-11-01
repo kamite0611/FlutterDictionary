@@ -15,6 +15,7 @@ import 'package:flutter_demos/views/widgets/Select/BasicDropdownMenu.dart';
 import 'package:flutter_demos/views/widgets/Select/Validation.dart';
 import 'package:flutter_demos/views/widgets/Slider/Basic.dart';
 import 'package:flutter_demos/views/widgets/Slider/Color.dart';
+import 'package:flutter_demos/views/widgets/Slider/Range.dart';
 import 'package:flutter_demos/views/widgets/Slider/Stepwise.dart';
 import 'package:flutter_demos/views/widgets/Switch/Basic.dart';
 import 'package:flutter_demos/views/widgets/Switch/Label.dart';
@@ -99,6 +100,7 @@ const List<Route> routes = [
   // Slider
   Route(path: "/widgets/Slider/Basic", widget: WidgetsSliderBasic()),
   Route(path: "/widgets/Slider/Stepwise", widget: WidgetsSliderStepwise()),
+  Route(path: "/widgets/Slider/Range", widget: WidgetsSliderRange()),
   Route(path: "/widgets/Slider/Color", widget: WidgetsSliderColor()),
 ];
 

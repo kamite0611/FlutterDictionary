@@ -47,7 +47,7 @@ export const CustomHead = ({ config }: HeadProps) => {
           key={`hreflang-${locale}`}
           rel="alternate"
           hrefLang={locale}
-          href={`https://www.flutter-gallery.com/${
+          href={`https://www.flutter-gallery.com${
             locale === defaultLocale ? '' : '/' + locale
           }${asPath}`}
         />

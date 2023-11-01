@@ -15,6 +15,8 @@ import {
   WidgetsSliderBasicPCode,
   WidgetsSliderColorCode,
   WidgetsSliderColorPCode,
+  WidgetsSliderRangeCode,
+  WidgetsSliderRangePCode,
   WidgetsSliderStepwiseCode,
   WidgetsSliderStepwisePCode,
 } from '@/constant/code/Widgets/Slider';
@@ -89,10 +91,40 @@ export default function SliderPage(props: SliderPageProps) {
         />
 
         <PostTypography mt={8} variant="h2">
+          範囲スライダー
+        </PostTypography>
+
+        <ul>
+          <li>RangeSlider</li>
+        </ul>
+
+        <Typography variant="body1">
+          ある範囲の値をユーザーから取得するためには<code>RangeSlider</code>
+          を使用することで対応できます。
+          <br />
+          <code>values</code>
+        </Typography>
+
+        <FlutterDemo
+          mt={2}
+          path="/widgets/Slider/Range"
+          height={200}
+          parentCode={WidgetsSliderRangePCode}
+          code={WidgetsSliderRangeCode}
+        />
+
+        <PostTypography mt={8} variant="h2">
           色の変更
         </PostTypography>
 
-        <Typography variant="body1" mt={2}></Typography>
+        <Typography variant="body1" mt={2}>
+          <code>activeColor</code>: 選択されている値以下の背景色とボタンの色
+          <br />
+          <code>inactiveColor</code>: 選択されている値以上の背景色
+          <br />
+          などの値を変更することで、Slider
+          Widgetでは細かく色を指定することができます。
+        </Typography>
 
         <FlutterDemo
           mt={2}
