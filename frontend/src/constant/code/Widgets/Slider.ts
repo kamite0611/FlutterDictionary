@@ -224,13 +224,13 @@ class _WidgetsSliderRangeState extends State<WidgetsSliderRange> {
           children: [
             RangeSlider(
                 values: sliderValue,
+                min: 0,
                 max: 100,
+                divisions: 5,
                 labels: RangeLabels(
                   sliderValue.start.round().toString(),
                   sliderValue.end.round().toString(),
                 ),
-                divisions: 5,
-                min: 0,
                 onChanged: (value) {
                   setState(() {
                     sliderValue = value;
@@ -238,13 +238,13 @@ class _WidgetsSliderRangeState extends State<WidgetsSliderRange> {
                 }),
             RangeSlider(
                 values: sliderValue,
+                min: 0,
                 max: 100,
+                divisions: 5,
                 labels: RangeLabels(
                   sliderValue.start.round().toString(),
                   sliderValue.end.round().toString(),
                 ),
-                divisions: 5,
-                min: 0,
                 onChanged: null),
           ]),
     ));
@@ -253,12 +253,16 @@ class _WidgetsSliderRangeState extends State<WidgetsSliderRange> {
 
 export const WidgetsSliderRangeCode = `RangeSlider(
   values: sliderValue,
+  min: 0,
   max: 100,
+  divisions: 5,
   labels: RangeLabels(
     sliderValue.start.round().toString(),
     sliderValue.end.round().toString(),
   ),
-  divisions: 5,
-  min: 0,
-  onChanged: null
+  onChanged: (value) {
+    setState(() {
+      sliderValue = value;
+    });
+  }
 ),`;

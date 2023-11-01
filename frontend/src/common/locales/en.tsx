@@ -331,6 +331,76 @@ const en = {
       </>
     ),
   },
+
+  //////////////////////////////////////
+  // Slider
+  WidgetSlider: {
+    title: 'Slider Widget Usage and Applications - FlutterGallery',
+    0: (
+      <>
+        The Slider Widget is useful for users to select and adjust values.
+        <br />
+        Here we explain how to use the Slider Widget provided by Flutter and
+        examples of its application.
+      </>
+    ),
+    '1_head': 'Basic Usage',
+    1: (
+      <>
+        <code>Slider</code> consists of a horizontal or vertical bar and a knob
+        (handle) to move over it.
+        <br />
+        The user can click or drag the knob to change the value.
+        <br />
+        <br />
+        The slider can be deactivated by setting the value of{' '}
+        <code>onChanged</code> to Null.
+      </>
+    ),
+    '2_head': 'Stepwise',
+    2: (
+      <>
+        <code>divisions</code> allows you to set how many steps you want the
+        Slider Widget to have.
+        <br />
+        The Slider will be divided into the number of divisions you set,
+        allowing you to select values in stages.
+        <br />
+        <br />
+        It is also useful to use the <code>label</code> option to indicate what
+        value is selected.
+      </>
+    ),
+    '3_head': 'Range Slider',
+    3: (
+      <>
+        To get a certain range of values from the user, <code>RangeSlider</code>{' '}
+        can be used.
+        <br />
+        The difference with Slider is that <code>value</code> and{' '}
+        <code>label</code> must be defined using their own class.
+        <br />
+        <br />
+        It should also be noted, though, that the values that can be received{' '}
+        <code>onChanged</code> are also changed to <code>RangeValues</code>,
+        <br />
+        Other than what has been mentioned, there is no significant difference
+        in the feel between Slider and RangeSlider.
+      </>
+    ),
+    '4_head': 'Colors',
+    4: (
+      <>
+        <code>activeColor</code>: background and button color below the selected
+        value
+        <br />
+        <code>inactiveColor</code>: background color above the selected value
+        <br />
+        The Slider Widget allows you to specify colors in detail by changing
+        values such as
+      </>
+    ),
+  },
 } as const;
 
 export default en;

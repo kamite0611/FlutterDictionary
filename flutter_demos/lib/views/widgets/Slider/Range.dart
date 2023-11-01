@@ -8,7 +8,7 @@ class WidgetsSliderRange extends StatefulWidget {
 }
 
 class _WidgetsSliderRangeState extends State<WidgetsSliderRange> {
-  RangeValues sliderValue = const RangeValues(20, 80);
+  RangeValues sliderValue = const RangeValues(20, 60);
 
   @override
   Widget build(BuildContext context) {

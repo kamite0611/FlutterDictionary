@@ -1,6 +1,7 @@
 import {
   CheckBoxRounded,
   HighlightAltRounded,
+  LinearScale,
   SmartButtonRounded,
   SvgIconComponent,
   TextFormatRounded,
@@ -65,12 +66,12 @@ export const NAV_CONFIG: NavConfig[] = [
         link: '/widgets/Checkbox',
         icon: CheckBoxRounded,
       },
-      // {
-      //   subTitle: 'INPUTS',
-      //   title: 'Slider',
-      //   link: '/widgets/Slider',
-      //   icon: LinearScale,
-      // },
+      {
+        subTitle: 'INPUTS',
+        title: 'Slider',
+        link: '/widgets/Slider',
+        icon: LinearScale,
+      },
     ],
   },
 ];

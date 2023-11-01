@@ -27,7 +27,7 @@ const ja = {
     '2_head': 'Widget一覧',
   },
   WidgetButton: {
-    title: 'Flutter Button Widgetの使い方と応用例 - Flutter図鑑',
+    title: 'Button Widgetの使い方と応用例 - Flutter図鑑',
     0: (
       <>
         FlutterではさまざまなButton Widgetが提供されています。
@@ -86,7 +86,7 @@ const ja = {
     ),
   },
   WidgetTextField: {
-    title: 'Flutter TextFiled Widgetの使い方と応用例 - Flutter図鑑',
+    title: 'TextFiled Widgetの使い方と応用例 - Flutter図鑑',
     0: (
       <>
         TextFiledはユーザーからのテキスト情報を受け取ることができます。
@@ -317,6 +317,74 @@ const ja = {
         <br />
         <code>validator</code>
         の値を組み換えれば自在にValidationを作成することができます。
+      </>
+    ),
+  },
+
+  //////////////////////////////////////
+  // Slider
+  WidgetSlider: {
+    title: 'Slider Widgetの使い方と応用例 - Flutter図鑑',
+    0: (
+      <>
+        Slider Widgetはユーザーが値を選択・調整するのに有効です。
+        <br />
+        ここではFlutterから提供されているSlider
+        Widgetの使い方と応用例を解説します。
+      </>
+    ),
+    '1_head': '基本的な使用方法',
+    1: (
+      <>
+        <code>Slider</code>
+        は水平または垂直のバーと、その上を動かすためのつまみ（ハンドル）から構成されます。
+        <br />
+        ユーザーは、つまみをクリックまたはドラッグして、値を変更できます。
+        <br />
+        <br />
+        <code>onChanged</code>
+        の値をNullに設定することで、スライダーを非活性にすることができます。
+      </>
+    ),
+    '2_head': '段階的なスライダー',
+    2: (
+      <>
+        <code>divisions</code>を使用することで、Slider
+        Widgetにどれだけ段階を設けるかを設定できます。
+        <br />
+        設定した数だけSliderがが分割され、段階的に値を選択できるようになります。
+        <br />
+        <br />
+        また、何の値を選択しているかを示すために、<code>label</code>
+        オプションを使用するのも有効です。
+      </>
+    ),
+    '3_head': '範囲スライダー',
+    3: (
+      <>
+        ある範囲の値をユーザーから取得するためには<code>RangeSlider</code>
+        を使用することで対応できます。
+        <br />
+        Sliderと異なる点は、<code>value</code>と<code>label</code>
+        が独自のclassを使用して定義しなければなりません。
+        <br />
+        <br />
+        また、<code>onChanged</code>で受け取れる値も<code>RangeValues</code>
+        に変化していることにも注意が必要ですが、
+        <br />
+        言及したこと以外には Slider と RangeSlider
+        の使用感の差に大きな違いはありません。
+      </>
+    ),
+    '4_head': '色の変更',
+    4: (
+      <>
+        <code>activeColor</code>: 選択されている値以下の背景色とボタンの色
+        <br />
+        <code>inactiveColor</code>: 選択されている値以上の背景色
+        <br />
+        などの値を変更することで、Slider
+        Widgetでは細かく色を指定することができます。
       </>
     ),
   },
