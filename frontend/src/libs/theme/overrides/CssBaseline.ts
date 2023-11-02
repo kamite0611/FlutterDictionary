@@ -1,4 +1,4 @@
-import { Noto_Sans_JP, Source_Code_Pro } from 'next/font/google';
+import { Noto_Sans_JP, Roboto, Source_Code_Pro } from 'next/font/google';
 
 import { Theme } from '@mui/material/styles';
 
@@ -15,13 +15,18 @@ const sans = Noto_Sans_JP({
   display: 'swap',
 });
 
+const roboto = Roboto({
+  weight: ['100', '300', '400', '500', '700', '900'],
+  subsets: ['latin'],
+});
+
 export const FontSourceCode = Source_Code_Pro({
   weight: '600',
   subsets: ['latin'],
 });
 
 export const generateFontFamily = () => {
-  const fonts = [sans];
+  const fonts = [roboto, sans];
   const fontFamilies = fonts.map((f) => f.style.fontFamily);
 
   return fontFamilies.join(', ') + ', sans-serif';

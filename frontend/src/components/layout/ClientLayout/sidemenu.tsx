@@ -169,7 +169,7 @@ const SideMenuItem = ({
         backgroundColor: (theme) =>
           isIncludePath ? `${theme.palette.primary.main}17` : 'initial',
 
-        fontWeight: isIncludePath ? 'bold' : 'initial',
+        fontWeight: isIncludePath ? 'bold' : '500',
 
         '&:hover': {
           backgroundColor: (theme) =>

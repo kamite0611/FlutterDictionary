@@ -17,7 +17,7 @@ import { spaceToDashes } from '@/common/utils';
  * 投稿用のカスタムタイトル
  */
 type PostTypographyProps = StackProps & {
-  children: ReactNode;
+  children?: ReactNode;
   variant: 'h2' | 'h3';
 };
 
