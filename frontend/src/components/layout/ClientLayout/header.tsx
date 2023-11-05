@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -6,8 +5,8 @@ import DragHandleRoundedIcon from '@mui/icons-material/DragHandleRounded';
 import TranslateRoundedIcon from '@mui/icons-material/TranslateRounded';
 import { Box, Button, Menu, MenuItem, Stack, styled } from '@mui/material';
 
-import { useLocale } from '@/common/hooks';
 import { BreakpointChanger } from '@/components/functional';
+import { LogoWithTitle } from '@/components/parts';
 import { HEADER_HEIGHT } from '@/config';
 
 type ClientLayoutHeaderProps = { onOpenSideMenu: () => void };
@@ -23,10 +22,6 @@ const HeaderWrapper = styled(Box)(({ theme }) => ({
 }));
 
 export const ClientLayoutHeader = (props: ClientLayoutHeaderProps) => {
-  const { locale, t } = useLocale();
-
-  const iconTitleURL = t.common.iconTitleURL;
-
   return (
     <HeaderWrapper component="header">
       <Stack
@@ -50,16 +45,7 @@ export const ClientLayoutHeader = (props: ClientLayoutHeaderProps) => {
             </Button>
           }
         />
-        <Link href="/">
-          <Image
-            src={iconTitleURL}
-            alt={t.common.title}
-            width={locale === 'ja' ? 144 : 154}
-            height={33}
-            priority
-            style={{ objectFit: 'contain' }}
-          />
-        </Link>
+        <LogoWithTitle />
         <TranslateButton />
       </Stack>
     </HeaderWrapper>

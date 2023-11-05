@@ -322,8 +322,8 @@ const en = {
         The Checkbox Widget can handle input value validation by using a{' '}
         <code>FormField</code>.
         <br />
-        Note that it must be enclosed in a <code>Form()</code> to be used and
-        the <code>formKey</code> must be set.
+        Note that it must be enclosed in a <code>Form() </code> and the{' '}
+        <code>formKey</code> must be set.
         <br />
         <br />
         You can freely create validation by changing the value of{' '}

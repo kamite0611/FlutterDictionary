@@ -311,7 +311,7 @@ const ja = {
         Checkbox Widgetで入力値の検証を行うためには<code>FormField</code>
         を使用することで対応できます。
         <br />
-        使用する<code>Form()</code>で囲い、<code>formKey</code>
+        <code>Form()</code>で囲い、<code>formKey</code>
         を設定しなければならないことに注意してください。
         <br />
         <br />

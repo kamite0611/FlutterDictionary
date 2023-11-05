@@ -5,6 +5,7 @@ import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRound
 import { Box, Collapse, Drawer, Link, Stack } from '@mui/material';
 
 import { BreakpointChanger } from '@/components/functional';
+import { LogoWithTitle } from '@/components/parts';
 import { HEADER_HEIGHT, NAV_CONFIG, NavConfig, NavConfigItem } from '@/config';
 
 /**
@@ -29,10 +30,12 @@ export const SideMenu = (props: {
             <Stack
               sx={(theme) => ({
                 p: 1,
-                minWidth: '220px',
+                minWidth: '300px',
                 height: '100%',
               })}
             >
+              <LogoWithTitle sx={{ padding: '10px' }} />
+
               {NAV_CONFIG.map((NavConfig, i) => {
                 return (
                   <SideMenuCategory
@@ -89,8 +92,6 @@ const SideMenuCategory = ({
   NavConfig: NavConfig;
   pathname: string;
 }) => {
-  // const isIncludePath = pathname.includes(NavConfig.link);
-
   const [open, setOpen] = useState(true);
 
   /** Components等 カテゴリーがクリックされた時 */
@@ -157,7 +158,7 @@ const SideMenuItem = ({
       href={item.link}
       sx={{
         display: 'block',
-        fontSize: '13px',
+        fontSize: '14px',
         borderRadius: '6px',
         cursor: 'pointer',
         padding: '5px',

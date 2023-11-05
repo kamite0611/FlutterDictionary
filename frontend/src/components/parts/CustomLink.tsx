@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 
 import { SxProps, styled } from '@mui/material';
 
-type NoStyleProps = LinkProps & {
+export type CustomLinkProps = LinkProps & {
   children?: ReactNode;
   noStyle?: boolean;
   as?: any;
@@ -18,7 +18,11 @@ const NoStyleLink = styled(Link)(({ theme }) => ({
 
 const DefaultLink = styled(Link)(({ theme }) => ({}));
 
-export const CustomLink = ({ children, noStyle, ...other }: NoStyleProps) => {
+export const CustomLink = ({
+  children,
+  noStyle,
+  ...other
+}: CustomLinkProps) => {
   if (noStyle) {
     return <NoStyleLink {...other}>{children}</NoStyleLink>;
   }

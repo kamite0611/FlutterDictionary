@@ -1,14 +1,12 @@
-import Image from 'next/image';
-
 import { Box, Button, Stack } from '@mui/material';
 
 import { useLocale } from '@/common/hooks';
-import { CustomLink } from '@/components/parts';
+import { CustomLink, LogoWithTitle } from '@/components/parts';
 
 type FooterProps = {};
 
 export const Footer = (props: FooterProps) => {
-  const { locale, t } = useLocale();
+  const { t } = useLocale();
 
   return (
     <Box
@@ -23,16 +21,7 @@ export const Footer = (props: FooterProps) => {
         flexDirection: 'column',
       }}
     >
-      <CustomLink href="/" locale="en" noStyle>
-        <Image
-          src={t.common.iconTitleURL}
-          alt={''}
-          width={locale === 'ja' ? 144 : 154}
-          height={33}
-          priority
-          style={{ objectFit: 'contain' }}
-        />
-      </CustomLink>
+      <LogoWithTitle />
       <Stack direction="row" gap={1}>
         <CustomLink href="/" locale="en" noStyle>
           <Button>English</Button>
