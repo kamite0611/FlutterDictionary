@@ -41,7 +41,7 @@ export const ClientLayout = (props: ClientLayoutProps) => {
           isSideMenuOpen={openSideMenu}
           onCloseSideMenu={handleCloseSideMenu}
         />
-        <Stack flexGrow={1}>
+        <Stack flexGrow={1} sx={{ width: '100%' }}>
           <Stack
             direction="row"
             sx={{ flexGrow: 1, minHeight: `calc(100vh - ${HEADER_HEIGHT}px)` }}
