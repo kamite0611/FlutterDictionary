@@ -16,7 +16,7 @@ class _WidgetsRadioBasicState extends State<WidgetsRadioBasic> {
   Widget build(BuildContext context) {
     return Center(
         child: SizedBox(
-      width: 140,
+      width: 160,
       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         ListTile(
           title: const Text("Apple"),
