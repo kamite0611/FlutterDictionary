@@ -36,38 +36,41 @@ export const ClientLayout = (props: ClientLayoutProps) => {
           <Divider />
         </Stack>
       )}
-
-      <Stack
-        direction="row"
-        sx={{ flexGrow: 1, minHeight: `calc(100vh - ${HEADER_HEIGHT}px)` }}
-      >
+      <Stack direction="row">
         <SideMenu
           isSideMenuOpen={openSideMenu}
           onCloseSideMenu={handleCloseSideMenu}
         />
-        <Stack
-          sx={(theme) => ({
-            flexGrow: 1,
-            width: '100%',
-            [theme.breakpoints.down('md')]: {
-              overflow: 'hidden',
-            },
-          })}
-        >
-          <Box
-            component="main"
-            sx={(theme) => ({
-              flexGrow: '1',
-              display: 'flex',
-              width: '100%',
-              flexDirection: 'column',
-            })}
+        <Stack>
+          <Stack
+            direction="row"
+            sx={{ flexGrow: 1, minHeight: `calc(100vh - ${HEADER_HEIGHT}px)` }}
           >
-            {children}
-          </Box>
+            <Stack
+              sx={(theme) => ({
+                flexGrow: 1,
+                width: '100%',
+                [theme.breakpoints.down('md')]: {
+                  overflow: 'hidden',
+                },
+              })}
+            >
+              <Box
+                component="main"
+                sx={(theme) => ({
+                  flexGrow: '1',
+                  display: 'flex',
+                  width: '100%',
+                  flexDirection: 'column',
+                })}
+              >
+                {children}
+              </Box>
+            </Stack>
+          </Stack>
+          <Footer />
         </Stack>
       </Stack>
-      <Footer />
     </Stack>
   );
 };
