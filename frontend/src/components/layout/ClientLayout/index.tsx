@@ -36,12 +36,12 @@ export const ClientLayout = (props: ClientLayoutProps) => {
           <Divider />
         </Stack>
       )}
-      <Stack direction="row">
+      <Stack direction="row" flexGrow={1}>
         <SideMenu
           isSideMenuOpen={openSideMenu}
           onCloseSideMenu={handleCloseSideMenu}
         />
-        <Stack>
+        <Stack flexGrow={1}>
           <Stack
             direction="row"
             sx={{ flexGrow: 1, minHeight: `calc(100vh - ${HEADER_HEIGHT}px)` }}

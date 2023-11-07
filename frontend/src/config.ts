@@ -2,7 +2,6 @@ import {
   CheckBoxRounded,
   HighlightAltRounded,
   LinearScale,
-  RadioButtonChecked,
   SmartButtonRounded,
   SvgIconComponent,
   TextFormatRounded,
@@ -73,12 +72,12 @@ export const NAV_CONFIG: NavConfig[] = [
         link: '/widgets/Slider',
         icon: LinearScale,
       },
-      {
-        subTitle: 'INPUTS',
-        title: 'Radio',
-        link: '/widgets/Radio',
-        icon: RadioButtonChecked,
-      },
+      // {
+      //   subTitle: 'INPUTS',
+      //   title: 'Radio',
+      //   link: '/widgets/Radio',
+      //   icon: RadioButtonChecked,
+      // },
     ],
   },
 ];
