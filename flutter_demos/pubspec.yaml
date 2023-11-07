@@ -87,23 +87,17 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
   fonts:
-    - family: NotoSansJP
+    - family: Roboto
       fonts:
-        - asset: assets/fonts/Noto_Sans_JP/NotoSansJP-Black.ttf
+        - asset: assets/fonts/Roboto/Roboto-Black.ttf
           weight: 900
-        - asset: assets/fonts/Noto_Sans_JP/NotoSansJP-ExtraBold.ttf
-          weight: 800
-        - asset: assets/fonts/Noto_Sans_JP/NotoSansJP-Bold.ttf
+        - asset: assets/fonts/Roboto/Roboto-Bold.ttf
           weight: 700
-        - asset: assets/fonts/Noto_Sans_JP/NotoSansJP-SemiBold.ttf
-          weight: 600
-        - asset: assets/fonts/Noto_Sans_JP/NotoSansJP-Medium.ttf
+        - asset: assets/fonts/Roboto/Roboto-Medium.ttf
           weight: 500
-        - asset: assets/fonts/Noto_Sans_JP/NotoSansJP-Regular.ttf
+        - asset: assets/fonts/Roboto/Roboto-Regular.ttf
           weight: 400
-        - asset: assets/fonts/Noto_Sans_JP/NotoSansJP-Light.ttf
+        - asset: assets/fonts/Roboto/Roboto-Light.ttf
           weight: 300
-        - asset: assets/fonts/Noto_Sans_JP/NotoSansJP-ExtraLight.ttf
-          weight: 200
-        - asset: assets/fonts/Noto_Sans_JP/NotoSansJP-Thin.ttf
+        - asset: assets/fonts/Roboto/Roboto-Thin.ttf
           weight: 100
