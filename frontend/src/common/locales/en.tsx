@@ -350,9 +350,6 @@ const en = {
         <code>Slider</code> consists of a horizontal or vertical bar and a knob
         (handle) to move over it.
         <br />
-        The user can click or drag the knob to change the value.
-        <br />
-        <br />
         The slider can be deactivated by setting the value of{' '}
         <code>onChanged</code> to Null.
       </>
