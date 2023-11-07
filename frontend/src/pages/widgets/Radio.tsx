@@ -1,5 +1,8 @@
+import Link from 'next/link';
+
 import { Typography } from '@mui/material';
 
+import { useLocale } from '@/common/hooks';
 import { getConfigByTitle } from '@/common/utils';
 import {
   FlutterDemo,
@@ -10,8 +13,12 @@ import { Page } from '@/components/functional';
 import {
   WidgetsRadioBasicCode,
   WidgetsRadioBasicPCode,
+  WidgetsRadioColorCode,
+  WidgetsRadioColorPCode,
   WidgetsRadioLabelCode,
   WidgetsRadioLabelPCode,
+  WidgetsRadioValidationCode,
+  WidgetsRadioValidationPCode,
 } from '@/constant/code/Widgets/Radio';
 
 type RadioPageProps = {};
@@ -19,38 +26,28 @@ type RadioPageProps = {};
 const { prevConfig, nextConfig } = getConfigByTitle('Radio') || {};
 
 export default function RadioPage(props: RadioPageProps) {
+  const { t } = useLocale();
+
+  const body = t.WidgetRadio;
+
   return (
-    <Page config={{ title: 'Radio Widgetの使い方と応用例 - Flutter図鑑' }}>
+    <Page config={{ title: body.title }}>
       <PostWrapper prevConfig={prevConfig} nextConfig={nextConfig}>
         <Typography variant="h1">Radio</Typography>
 
         <Typography mt={2} variant="body1">
-          Radio
-          Widgetはユーザーが複数の選択肢から複数または一つを選択する時に有効です。
-          <br />
-          ここではFlutterから提供されているRadio
-          Widgetの使い方と応用例を解説します。
+          {body[0]}
         </Typography>
 
         <PostTypography mt={5} variant="h2">
-          基本的な使用方法
+          {body['1_head']}
         </PostTypography>
 
         <ul>
           <li>Radio</li>
         </ul>
 
-        <Typography variant="body1">
-          FlutterでシンプルなRadioボタンを作成するためには<code>Radio</code>
-          が有効です。
-          <br />
-          <code>onChanged</code>でRadio
-          Widgetに設定した値がユーザーが選択されたかどうかを取得することができます。
-          <br />
-          <br />
-          <code>onChanged</code>の値をNullにすることで、フィールドを disabled
-          にすることができます。
-        </Typography>
+        <Typography variant="body1">{body[1]}</Typography>
 
         <FlutterDemo
           mt={2}
@@ -61,17 +58,14 @@ export default function RadioPage(props: RadioPageProps) {
         />
 
         <PostTypography mt={8} variant="h3">
-          ラベル付きのラジオボタン
+          {body['2_head']}
         </PostTypography>
 
         <ul>
           <li>RadioListTile</li>
         </ul>
 
-        <Typography variant="body1">
-          <code>RadioListTile</code>
-          はラベル付きのラジオボタンを作成したい場合に有効です。
-        </Typography>
+        <Typography variant="body1">{body[2]}</Typography>
 
         <FlutterDemo
           mt={2}
@@ -80,6 +74,75 @@ export default function RadioPage(props: RadioPageProps) {
           parentCode={WidgetsRadioLabelPCode}
           code={WidgetsRadioLabelCode}
         />
+
+        <PostTypography mt={8} variant="h3">
+          {body['3_head']}
+        </PostTypography>
+
+        <Typography variant="body1" mt={2}>
+          {body[3]}
+        </Typography>
+
+        <FlutterDemo
+          mt={2}
+          path="/widgets/Radio/Color"
+          height={100}
+          parentCode={WidgetsRadioColorPCode}
+          code={WidgetsRadioColorCode}
+        />
+
+        <PostTypography mt={8} variant="h3">
+          Validation
+        </PostTypography>
+
+        <ul>
+          <li>FormField</li>
+        </ul>
+
+        <Typography variant="body1">{body[4]}</Typography>
+
+        <FlutterDemo
+          mt={2}
+          path="/widgets/Radio/Validation"
+          height={150}
+          parentCode={WidgetsRadioValidationPCode}
+          code={WidgetsRadioValidationCode}
+        />
+
+        <PostTypography mt={8} variant="h3">
+          API
+        </PostTypography>
+
+        <Typography mt={1} variant="body1">
+          {t.common.api_desc}
+        </Typography>
+
+        <ul>
+          <li>
+            <Link
+              href="https://api.flutter.dev/flutter/material/Radio-class.html"
+              target="_blank"
+            >
+              Radio()
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="https://api.flutter.dev/flutter/material/RadioListTile-class.html"
+              target="_blank"
+            >
+              RadioListTile()
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="https://api.flutter.dev/flutter/widgets/FormField-class.html"
+              target="_blank"
+            >
+              FormField()
+            </Link>
+          </li>
+        </ul>
       </PostWrapper>
     </Page>
   );

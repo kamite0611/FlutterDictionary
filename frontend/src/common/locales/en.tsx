@@ -401,6 +401,61 @@ const en = {
       </>
     ),
   },
+
+  //////////////////////////////////////
+  // Radio
+  WidgetRadio: {
+    title: 'Radio Widget Usage and Applications - FlutterGallery',
+    '0': (
+      <>
+        Radio Widget is useful when users have multiple or one of several
+        options to choose from.
+        <br />
+        Here we explain how to use the Radio Widget provided by Flutter and
+        examples of its applications.
+      </>
+    ),
+    '1_head': 'Basic Usage',
+    1: (
+      <>
+        <code>Radio</code> is a great way to create simple Radio buttons in
+        Flutter.
+        <br />
+        With <code>onChanged</code>, you can get whether the value set in the
+        Radio Widget has been selected by the user.
+      </>
+    ),
+    '2_head': 'Label',
+    2: (
+      <>
+        <code>RadioListTile</code> is useful if you want to create radio buttons
+        with labels.
+        <br />
+        You can change the field to disabled by setting the value of{' '}
+        <code>onChanged</code> to null.
+      </>
+    ),
+    '3_head': 'Colors',
+    3: (
+      <>
+        By changing the values of <code>activeColor</code>,{' '}
+        <code>hoverColor</code>, etc., you can change the color when active or
+        hovering.
+        <br />
+        If you want to change the color more freely, you can use{' '}
+        <code>MaterialStateProperty</code>.
+      </>
+    ),
+    4: (
+      <>
+        To validate input values in the Radio Widget, you can use a{' '}
+        <code>FormField</code>.
+        <br />
+        Note that it must be enclosed in a <code>Form()</code> and the{' '}
+        <code>formKey</code> must be set.
+      </>
+    ),
+  },
 } as const;
 
 export default en;

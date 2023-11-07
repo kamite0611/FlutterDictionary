@@ -10,7 +10,9 @@ import 'package:flutter_demos/views/widgets/Checkbox/Color.dart';
 import 'package:flutter_demos/views/widgets/Checkbox/Label.dart';
 import 'package:flutter_demos/views/widgets/Checkbox/Size.dart';
 import 'package:flutter_demos/views/widgets/Radio/Basic.dart';
+import 'package:flutter_demos/views/widgets/Radio/Color.dart';
 import 'package:flutter_demos/views/widgets/Radio/Label.dart';
+import 'package:flutter_demos/views/widgets/Radio/Validation.dart';
 import 'package:flutter_demos/views/widgets/Select/Basic.dart';
 import 'package:flutter_demos/views/widgets/Select/BasicDropdownButton.dart';
 import 'package:flutter_demos/views/widgets/Select/BasicDropdownMenu.dart';
@@ -108,6 +110,8 @@ const List<Route> routes = [
   // Radio
   Route(path: "/widgets/Radio/Basic", widget: WidgetsRadioBasic()),
   Route(path: "/widgets/Radio/Label", widget: WidgetsRadioLabel()),
+  Route(path: "/widgets/Radio/Color", widget: WidgetsRadioColor()),
+  Route(path: "/widgets/Radio/Validation", widget: WidgetsRadioValidation()),
 ];
 
 class Material3App extends StatelessWidget {

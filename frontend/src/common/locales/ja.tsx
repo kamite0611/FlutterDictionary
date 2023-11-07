@@ -388,6 +388,60 @@ const ja = {
       </>
     ),
   },
+
+  //////////////////////////////////////
+  // Radio
+  WidgetRadio: {
+    title: 'Radio Widgetの使い方と応用例 - Flutter図鑑',
+    '0': (
+      <>
+        Radio
+        Widgetはユーザーが複数の選択肢から複数または一つを選択する時に有効です。
+        <br />
+        ここではFlutterから提供されているRadio
+        Widgetの使い方と応用例を解説します。
+      </>
+    ),
+    '1_head': '基本的な使用方法',
+    1: (
+      <>
+        FlutterでシンプルなRadioボタンを作成するためには<code>Radio</code>
+        が有効です。
+        <br />
+        <code>onChanged</code>でRadio
+        Widgetに設定した値がユーザーが選択されたかどうかを取得することができます。
+      </>
+    ),
+    '2_head': 'ラベル付きのラジオボタン',
+    2: (
+      <>
+        <code>RadioListTile</code>
+        はラベル付きのラジオボタンを作成したい場合に有効です。
+        <br />
+        <code>onChanged</code>の値をNullにすることで、フィールドを disabled
+        に変更することができます。
+      </>
+    ),
+    '3_head': '色の変更',
+    3: (
+      <>
+        <code>activeColor</code>, <code>hoverColor</code>
+        などの値を変更させることで、アクティブやホバー時の色を変更することができます。
+        <br />
+        より自在に色を変更したい場合は<code>MaterialStateProperty</code>
+        を使用して実現することができます。
+      </>
+    ),
+    4: (
+      <>
+        Radio Widgetで入力値の検証を行うためには<code>FormField</code>
+        を使用することで対応できます。
+        <br />
+        <code>Form()</code>で囲い、<code>formKey</code>
+        を設定しなければならないことに注意してください。
+      </>
+    ),
+  },
 } as const;
 
 export default ja;

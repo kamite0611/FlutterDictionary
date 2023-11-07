@@ -1,9 +1,9 @@
-import Link from 'next/link';
 import { ReactNode, useEffect } from 'react';
 
 import { NavigateBefore, NavigateNext } from '@mui/icons-material';
 import { Box, Button, Divider, Stack, styled } from '@mui/material';
 
+import { CustomLink } from '@/components/parts';
 import { NavConfigItem } from '@/config';
 
 import { PostTOC } from './PostTOC';
@@ -79,7 +79,7 @@ export const PostWrapper = ({
                     >
                       Previous
                     </Box>
-                    <Link href={prevConfig.link}>
+                    <CustomLink href={prevConfig.link} noStyle>
                       <Button
                         variant="outlined"
                         sx={{ borderRadius: '10px' }}
@@ -87,7 +87,7 @@ export const PostWrapper = ({
                       >
                         {prevConfig.title}
                       </Button>
-                    </Link>
+                    </CustomLink>
                   </>
                 )}
               </Stack>
@@ -103,7 +103,7 @@ export const PostWrapper = ({
                     >
                       Next
                     </Box>
-                    <Link href={nextConfig.link}>
+                    <CustomLink href={nextConfig.link} noStyle>
                       <Button
                         variant="outlined"
                         sx={{ borderRadius: '10px' }}
@@ -111,7 +111,7 @@ export const PostWrapper = ({
                       >
                         {nextConfig.title}
                       </Button>
-                    </Link>
+                    </CustomLink>
                   </>
                 )}
               </Stack>
