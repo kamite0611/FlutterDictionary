@@ -165,8 +165,10 @@ const SideMenuItem = ({
         paddingLeft: 5,
         position: 'relative',
 
+        letterSpacing: '0.7px',
+
         color: (theme) =>
-          isIncludePath ? `${theme.palette.primary.main}` : 'initial',
+          isIncludePath ? `${theme.palette.primary.main}` : 'rgb(67, 77, 91)',
         backgroundColor: (theme) =>
           isIncludePath ? `${theme.palette.primary.main}17` : 'initial',
 

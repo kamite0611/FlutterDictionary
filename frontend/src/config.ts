@@ -79,6 +79,12 @@ export const NAV_CONFIG: NavConfig[] = [
         link: '/widgets/Radio',
         icon: RadioButtonChecked,
       },
+      // {
+      //   subTitle: 'INPUTS',
+      //   title: 'Toggle Button',
+      //   link: '/widgets/ToggleButton',
+      //   icon: CallSplitRounded,
+      // },
     ],
   },
 ];
