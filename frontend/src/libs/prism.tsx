@@ -22,7 +22,7 @@ const CustomCodeBox = styled(Box)(({ theme }) => ({
 
   '& pre': {
     fontSize: '13px',
-    letterSpacing: 0,
+    letterSpacing: '0.5px',
     fontFamily: robotoMono.style.fontFamily,
   },
 }));
