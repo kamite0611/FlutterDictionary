@@ -1,4 +1,4 @@
-import { Noto_Sans_JP, Roboto, Source_Code_Pro } from 'next/font/google';
+import { Noto_Sans_JP, Roboto, Roboto_Mono } from 'next/font/google';
 
 import { Theme } from '@mui/material/styles';
 
@@ -20,7 +20,7 @@ const roboto = Roboto({
   subsets: ['latin'],
 });
 
-export const FontSourceCode = Source_Code_Pro({
+export const robotoMono = Roboto_Mono({
   weight: '600',
   subsets: ['latin'],
 });

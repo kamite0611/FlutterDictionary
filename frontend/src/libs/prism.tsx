@@ -2,7 +2,7 @@ import { Highlight, themes } from 'prism-react-renderer';
 
 import { Box, styled } from '@mui/material';
 
-import { FontSourceCode } from './theme/overrides/CssBaseline';
+import { robotoMono } from './theme/overrides/CssBaseline';
 
 type PrismProps = {
   code: string;
@@ -23,7 +23,7 @@ const CustomCodeBox = styled(Box)(({ theme }) => ({
   '& pre': {
     fontSize: '13px',
     letterSpacing: 0,
-    fontFamily: FontSourceCode.style.fontFamily,
+    fontFamily: robotoMono.style.fontFamily,
   },
 }));
 
