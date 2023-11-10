@@ -22,6 +22,10 @@ const CustomCodeBox = styled(Box)(({ theme }) => ({
   maxHeight: '500px',
   overflow: 'scroll',
 
+  '& .boolean': {
+    color: 'rgb(86, 156, 214)',
+  },
+
   '& pre': {
     fontSize: '13px',
     letterSpacing: '0.5px',

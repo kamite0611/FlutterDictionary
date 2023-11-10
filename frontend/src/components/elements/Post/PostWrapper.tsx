@@ -1,7 +1,7 @@
 import { ReactNode, useEffect } from 'react';
 
 import { NavigateBefore, NavigateNext } from '@mui/icons-material';
-import { Box, Button, Divider, Stack, styled } from '@mui/material';
+import { Box, Button, Stack, styled } from '@mui/material';
 
 import { CustomLink } from '@/components/parts';
 import { NavConfigItem } from '@/config';
@@ -63,60 +63,56 @@ export const PostWrapper = ({
         {children}
 
         {(prevConfig || nextConfig) && (
-          <>
-            <Divider sx={{ mt: 3 }} />
-
-            <Stack direction="row" py={3} justifyContent="space-between">
-              <Stack>
-                {prevConfig && (
-                  <>
-                    <Box
-                      sx={{
-                        fontSize: '13px',
-                        marginBottom: '6px',
-                        color: '#6d6d6d',
-                      }}
+          <Stack direction="row" mt={3} py={3} justifyContent="space-between">
+            <Stack>
+              {prevConfig && (
+                <>
+                  <Box
+                    sx={{
+                      fontSize: '13px',
+                      marginBottom: '6px',
+                      color: '#6d6d6d',
+                    }}
+                  >
+                    Previous
+                  </Box>
+                  <CustomLink href={prevConfig.link} noStyle>
+                    <Button
+                      variant="outlined"
+                      sx={{ borderRadius: '10px' }}
+                      startIcon={<NavigateBefore />}
                     >
-                      Previous
-                    </Box>
-                    <CustomLink href={prevConfig.link} noStyle>
-                      <Button
-                        variant="outlined"
-                        sx={{ borderRadius: '10px' }}
-                        startIcon={<NavigateBefore />}
-                      >
-                        {prevConfig.title}
-                      </Button>
-                    </CustomLink>
-                  </>
-                )}
-              </Stack>
-              <Stack sx={{ textAlign: 'end' }}>
-                {nextConfig && (
-                  <>
-                    <Box
-                      sx={{
-                        fontSize: '13px',
-                        marginBottom: '6px',
-                        color: '#6d6d6d',
-                      }}
-                    >
-                      Next
-                    </Box>
-                    <CustomLink href={nextConfig.link} noStyle>
-                      <Button
-                        variant="outlined"
-                        sx={{ borderRadius: '10px' }}
-                        endIcon={<NavigateNext />}
-                      >
-                        {nextConfig.title}
-                      </Button>
-                    </CustomLink>
-                  </>
-                )}
-              </Stack>
+                      {prevConfig.title}
+                    </Button>
+                  </CustomLink>
+                </>
+              )}
             </Stack>
-          </>
+            <Stack sx={{ textAlign: 'end' }}>
+              {nextConfig && (
+                <>
+                  <Box
+                    sx={{
+                      fontSize: '13px',
+                      marginBottom: '6px',
+                      color: '#6d6d6d',
+                    }}
+                  >
+                    Next
+                  </Box>
+                  <CustomLink href={nextConfig.link} noStyle>
+                    <Button
+                      variant="outlined"
+                      sx={{ borderRadius: '10px' }}
+                      endIcon={<NavigateNext />}
+                    >
+                      {nextConfig.title}
+                    </Button>
+                  </CustomLink>
+                </>
+              )}
+            </Stack>
+          </Stack>
         )}
       </StyledWrapper>
       <PostTOC />

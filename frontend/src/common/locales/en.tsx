@@ -453,6 +453,64 @@ const en = {
       </>
     ),
   },
+
+  //////////////////////////////////////
+  // Toggle Button
+  WidgetToggleButton: {
+    title: 'ToggleButton Widget Usage and Applications - FlutterGallery',
+    0: (
+      <>
+        The ToggleButton Widget is useful when you want the user to select one
+        of several options.
+        <br />
+        Here we explain how to use the ToggleButton Widget provided by Flutter,
+        as well as some examples of its application.
+      </>
+    ),
+    '1_head': 'Basic Usage',
+    1: (
+      <>
+        <code>ToggleButtons</code> is an effective way to create simple toggle
+        buttons in Flutter.
+      </>
+    ),
+    2: (
+      <>
+        By adjusting the value that goes into <code>isSelected</code>, you can
+        make a single selection.
+      </>
+    ),
+    '3_head': 'Size',
+    3: (
+      <>
+        By adjusting the value of <code>constraints</code>, you can adjust the
+        size of the button.
+        <br />
+        If you want to set the size to the full width, you can use{' '}
+        <code>MediaQuery</code> to do so.
+      </>
+    ),
+    '4_head': 'Colors',
+    4: (
+      <>
+        You can adjust the color in detail, such as{' '}
+        <code>selectedBorderColor</code>(color of the currently selected
+        border).
+        <br />
+        You can also change <code>borderRadius</code> to adjust the roundness of
+        the button.
+      </>
+    ),
+    '5_head': 'Button with icon',
+    5: (
+      <>
+        To improve UX, it is useful to display icons that make it easier to
+        understand the meaning of buttons.
+        <br />
+        <code>Icon()</code> can be used to change the button text to an icon.
+      </>
+    ),
+  },
 } as const;
 
 export default en;

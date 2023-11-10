@@ -439,6 +439,64 @@ const ja = {
       </>
     ),
   },
+
+  //////////////////////////////////////
+  // Toggle Button
+  WidgetToggleButton: {
+    title: 'ToggleButton Widgetの使い方と応用例 - Flutter図鑑',
+    0: (
+      <>
+        ToggleButton
+        Widgetは複数の選択肢から一つをユーザーに選択させる時に有効です。
+        <br />
+        ここではFlutterから提供されているToggleButton
+        Widgetの使い方と応用例を解説します。
+      </>
+    ),
+    '1_head': '基本的な使用方法',
+    1: (
+      <>
+        Flutterでシンプルなトグルボタンを作成するためには
+        <code>ToggleButtons</code>
+        が有効です。
+      </>
+    ),
+    2: (
+      <>
+        <code>isSelected</code>
+        に入る値を調整することで、単一選択にすることができます。
+      </>
+    ),
+    '3_head': 'サイズの変更',
+    3: (
+      <>
+        <code>constraints</code>
+        の値を調整することで、ボタンのサイズ調整をすることができます。
+        <br />
+        横幅いっぱいにサイズを設定したい場合は<code>MediaQuery</code>
+        を使用して調整できます。
+      </>
+    ),
+    '4_head': '色の変更',
+    4: (
+      <>
+        <code>selectedBorderColor</code>
+        （選択中のボーダーの色）など、細かく色の調整をすることができます。
+        <br />
+        また、<code>borderRadius</code>
+        を変更して、ボタンの丸みを調整することができます。
+      </>
+    ),
+    '5_head': 'アイコン付きのボタン',
+    5: (
+      <>
+        UXを向上させるためには、ボタンの意味をわかりやすくするアイコンを表示させるのが有効です。
+        <br />
+        <code>Icon()</code>
+        を使用してボタンのテキストをアイコンに変更することができます。
+      </>
+    ),
+  },
 } as const;
 
 export default ja;

@@ -8,19 +8,19 @@ const typography = {
   h1: {
     fontWeight: 700,
     lineHeight: 1.4,
-    letterSpacing: 0,
+    letterSpacing: pxToRem(0.8),
     fontSize: pxToRem(36),
   },
   h2: {
     fontWeight: 600,
     lineHeight: 1.4,
-    letterSpacing: 0,
+    letterSpacing: pxToRem(0.8),
     fontSize: pxToRem(20),
   },
   h3: {
     fontWeight: 600,
     lineHeight: 1.4,
-    letterSpacing: 0,
+    letterSpacing: pxToRem(0.8),
     fontSize: pxToRem(20),
   },
   body1: {

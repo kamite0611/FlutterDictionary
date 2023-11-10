@@ -1,4 +1,5 @@
 import {
+  Brightness4Rounded,
   CheckBoxRounded,
   HighlightAltRounded,
   LinearScale,
@@ -79,12 +80,12 @@ export const NAV_CONFIG: NavConfig[] = [
         link: '/widgets/Radio',
         icon: RadioButtonChecked,
       },
-      // {
-      //   subTitle: 'INPUTS',
-      //   title: 'Toggle Button',
-      //   link: '/widgets/ToggleButton',
-      //   icon: CallSplitRounded,
-      // },
+      {
+        subTitle: 'INPUTS',
+        title: 'Toggle Button',
+        link: '/widgets/ToggleButton',
+        icon: Brightness4Rounded,
+      },
     ],
   },
 ];

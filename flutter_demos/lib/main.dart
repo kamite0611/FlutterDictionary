@@ -30,6 +30,10 @@ import 'package:flutter_demos/views/widgets/TextField/Colors.dart';
 import 'package:flutter_demos/views/widgets/TextField/FormControl.dart';
 import 'package:flutter_demos/views/widgets/TextField/Validations.dart';
 import 'package:flutter_demos/views/widgets/ToggleButton/Basic.dart';
+import 'package:flutter_demos/views/widgets/ToggleButton/Color.dart';
+import 'package:flutter_demos/views/widgets/ToggleButton/Icon.dart';
+import 'package:flutter_demos/views/widgets/ToggleButton/Single.dart';
+import 'package:flutter_demos/views/widgets/ToggleButton/Size.dart';
 
 void main() {
   runApp(const MyApp());
@@ -117,6 +121,13 @@ const List<Route> routes = [
   // ToggleButton
   Route(
       path: "/widgets/ToggleButton/Basic", widget: WidgetsToggleButtonBasic()),
+  Route(
+      path: "/widgets/ToggleButton/Single",
+      widget: WidgetsToggleButtonSingle()),
+  Route(path: "/widgets/ToggleButton/Size", widget: WidgetsToggleButtonSize()),
+  Route(
+      path: "/widgets/ToggleButton/Color", widget: WidgetsToggleButtonColor()),
+  Route(path: "/widgets/ToggleButton/Icon", widget: WidgetsToggleButtonIcon()),
 ];
 
 class Material3App extends StatelessWidget {
