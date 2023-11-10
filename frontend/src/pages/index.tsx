@@ -8,6 +8,7 @@ import { NAV_CONFIG } from '@/config';
 const StyledWrapper = styled(Stack)(({ theme }) => ({
   padding: '40px 60px',
   maxWidth: '800px',
+  marginBottom: '100px',
   [theme.breakpoints.down('lg')]: {
     padding: '20px 30px',
     maxWidth: '100%',

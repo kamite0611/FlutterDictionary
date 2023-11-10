@@ -36,12 +36,20 @@ export const ClientLayout = (props: ClientLayoutProps) => {
           <Divider />
         </Stack>
       )}
-      <Stack direction="row" flexGrow={1}>
+      <Stack direction="row">
         <SideMenu
           isSideMenuOpen={openSideMenu}
           onCloseSideMenu={handleCloseSideMenu}
         />
-        <Stack flexGrow={1} sx={{ width: '100%' }}>
+        <Stack
+          sx={(theme) => ({
+            flexGrow: 1,
+            width: '100%',
+            [theme.breakpoints.down('md')]: {
+              overflow: 'hidden',
+            },
+          })}
+        >
           <Stack
             direction="row"
             sx={{ flexGrow: 1, minHeight: `calc(100vh - ${HEADER_HEIGHT}px)` }}
@@ -50,9 +58,6 @@ export const ClientLayout = (props: ClientLayoutProps) => {
               sx={(theme) => ({
                 flexGrow: 1,
                 width: '100%',
-                [theme.breakpoints.down('md')]: {
-                  overflow: 'hidden',
-                },
               })}
             >
               <Box
