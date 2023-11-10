@@ -19,9 +19,6 @@ const CustomCodeBox = styled(Box)(({ theme }) => ({
   backgroundColor: '#1E1E1E',
   fontWeight: 600,
 
-  '& .maybe-class-name': {
-    color: 'rgb(78, 201, 176)',
-  },
   maxHeight: '500px',
   overflow: 'scroll',
 
