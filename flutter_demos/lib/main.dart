@@ -29,6 +29,7 @@ import 'package:flutter_demos/views/widgets/TextField/Basic.dart';
 import 'package:flutter_demos/views/widgets/TextField/Colors.dart';
 import 'package:flutter_demos/views/widgets/TextField/FormControl.dart';
 import 'package:flutter_demos/views/widgets/TextField/Validations.dart';
+import 'package:flutter_demos/views/widgets/ToggleButton/Basic.dart';
 
 void main() {
   runApp(const MyApp());
@@ -112,6 +113,10 @@ const List<Route> routes = [
   Route(path: "/widgets/Radio/Label", widget: WidgetsRadioLabel()),
   Route(path: "/widgets/Radio/Color", widget: WidgetsRadioColor()),
   Route(path: "/widgets/Radio/Validation", widget: WidgetsRadioValidation()),
+
+  // ToggleButton
+  Route(
+      path: "/widgets/ToggleButton/Basic", widget: WidgetsToggleButtonBasic()),
 ];
 
 class Material3App extends StatelessWidget {

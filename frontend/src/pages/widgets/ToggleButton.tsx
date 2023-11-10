@@ -9,9 +9,9 @@ import {
 } from '@/components/elements';
 import { Page } from '@/components/functional';
 import {
-  WidgetsRadioBasicCode,
-  WidgetsRadioBasicPCode,
-} from '@/constant/code/Widgets/Radio';
+  WidgetsToggleButtonBasicCode,
+  WidgetsToggleButtonBasicPCode,
+} from '@/constant/code/Widgets/ToggleButton';
 
 type ToggleButtonPageProps = {};
 
@@ -27,7 +27,11 @@ export default function ToggleButtonPage(props: ToggleButtonPageProps) {
         <Typography variant="h1">Toggle Button</Typography>
 
         <Typography mt={2} variant="body1">
-          {body[0]}
+          ToggleButton
+          Widgetは複数の選択肢から一つをユーザーに選択させる時に有効です。
+          <br />
+          ここではFlutterから提供されているToggleButton
+          Widgetの使い方と応用例を解説します。
         </Typography>
 
         <PostTypography mt={5} variant="h2">
@@ -35,17 +39,21 @@ export default function ToggleButtonPage(props: ToggleButtonPageProps) {
         </PostTypography>
 
         <ul>
-          <li>ToggleButton</li>
+          <li>ToggleButtons</li>
         </ul>
 
-        <Typography variant="body1">{body[1]}</Typography>
+        <Typography variant="body1">
+          Flutterでシンプルなトグルボタンを作成するためには
+          <code>ToggleButtons</code>
+          が有効です。
+        </Typography>
 
         <FlutterDemo
           mt={2}
-          path="/widgets/Radio/Basic"
-          height={200}
-          parentCode={WidgetsRadioBasicPCode}
-          code={WidgetsRadioBasicCode}
+          path="/widgets/ToggleButton/Basic"
+          height={130}
+          parentCode={WidgetsToggleButtonBasicPCode}
+          code={WidgetsToggleButtonBasicCode}
         />
       </PostWrapper>
     </Page>

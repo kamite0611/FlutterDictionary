@@ -1,4 +1,9 @@
-import { Highlight, themes } from 'prism-react-renderer';
+import { Highlight, themes, Prism } from 'prism-react-renderer';
+
+// Hack to *include* Rust language.
+// @ts-ignore
+(typeof global !== 'undefined' ? global : window).Prism = Prism;
+require('prismjs/components/prism-dart');
 
 import { Box, styled } from '@mui/material';
 
@@ -27,7 +32,7 @@ const CustomCodeBox = styled(Box)(({ theme }) => ({
   },
 }));
 
-export const PrismCode = ({ code, language = 'tsx' }: PrismProps) => {
+export const PrismCode = ({ code, language = 'dart' }: PrismProps) => {
   return (
     <CustomCodeBox>
       <Highlight theme={themes.vsDark} code={code} language={language}>
