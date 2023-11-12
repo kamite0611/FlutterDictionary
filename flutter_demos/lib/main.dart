@@ -9,6 +9,10 @@ import 'package:flutter_demos/views/widgets/Checkbox/Basic.dart';
 import 'package:flutter_demos/views/widgets/Checkbox/Color.dart';
 import 'package:flutter_demos/views/widgets/Checkbox/Label.dart';
 import 'package:flutter_demos/views/widgets/Checkbox/Size.dart';
+import 'package:flutter_demos/views/widgets/Dialog/Alert.dart';
+import 'package:flutter_demos/views/widgets/Dialog/Animate.dart';
+import 'package:flutter_demos/views/widgets/Dialog/Basic.dart';
+import 'package:flutter_demos/views/widgets/Dialog/FullScreen.dart';
 import 'package:flutter_demos/views/widgets/Radio/Basic.dart';
 import 'package:flutter_demos/views/widgets/Radio/Color.dart';
 import 'package:flutter_demos/views/widgets/Radio/Label.dart';
@@ -128,6 +132,12 @@ const List<Route> routes = [
   Route(
       path: "/widgets/ToggleButton/Color", widget: WidgetsToggleButtonColor()),
   Route(path: "/widgets/ToggleButton/Icon", widget: WidgetsToggleButtonIcon()),
+
+  // Dialog
+  Route(path: "/widgets/Dialog/Basic", widget: WidgetsDialogBasic()),
+  Route(path: "/widgets/Dialog/FullScreen", widget: WidgetsDialogFullScreen()),
+  Route(path: "/widgets/Dialog/Animate", widget: WidgetsDialogAnimate()),
+  Route(path: "/widgets/Dialog/Alert", widget: WidgetsDialogAlert()),
 ];
 
 class Material3App extends StatelessWidget {

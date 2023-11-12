@@ -3,7 +3,8 @@ import { Stack, Typography, styled } from '@mui/material';
 import { useLocale } from '@/common/hooks';
 import { Page } from '@/components/functional';
 import { CustomLink } from '@/components/parts';
-import { NAV_CONFIG } from '@/config';
+import { ConfigWithSubtitle } from '@/config';
+import { ibmPlex } from '@/libs/theme/overrides/CssBaseline';
 
 const StyledWrapper = styled(Stack)(({ theme }) => ({
   padding: '40px 60px',
@@ -22,7 +23,9 @@ export default function Home() {
   const { t } = useLocale();
   const body = t.TopPage;
 
-  const widgetConfig = NAV_CONFIG.find((config) => config.title == 'Widgets');
+  const widgetConfig = ConfigWithSubtitle.find(
+    (config) => config.title == 'Widgets'
+  );
   const widgetItems = widgetConfig!.items;
 
   return (
@@ -72,59 +75,76 @@ export default function Home() {
             {body['2_head']}
           </Typography>
 
-          <Stack
-            sx={{
-              display: 'grid',
-              gridTemplateColumns: '1fr 1fr 1fr',
-              width: '100%',
-              maxWidth: '800px',
-              mt: '20px',
-              gap: '16px',
-            }}
-          >
-            {widgetItems.map((widgetItem) => {
-              const Icon = widgetItem.icon;
-              return (
-                <CustomLink
-                  key={widgetItem.title}
-                  href={widgetItem.link}
-                  noStyle
+          {Object.entries(widgetItems).map(([subTitle, items]) => {
+            return (
+              <>
+                <Stack
+                  sx={{
+                    color: '#6B7A90',
+                    my: 2,
+                    mt: 5,
+                    fontWeight: 'bold',
+                    fontSize: '14px',
+                    fontFamily: ibmPlex.style.fontFamily,
+                  }}
                 >
-                  <Stack
-                    sx={{
-                      alignItems: 'center',
-                      border: '1px solid #E5EAF2',
-                      backgroundColor: '#F5F5F5',
-                      borderRadius: '10px',
-                    }}
-                  >
-                    {Icon && (
-                      <Stack sx={{ padding: '20px' }}>
-                        <Icon
+                  {subTitle}
+                </Stack>
+                <Stack
+                  sx={{
+                    display: 'grid',
+                    gridTemplateColumns: '1fr 1fr 1fr',
+                    width: '100%',
+                    maxWidth: '800px',
+                    gap: '16px',
+                  }}
+                >
+                  {items.map((widgetItem) => {
+                    const Icon = widgetItem.icon;
+                    return (
+                      <CustomLink
+                        key={widgetItem.title}
+                        href={widgetItem.link}
+                        noStyle
+                      >
+                        <Stack
                           sx={{
-                            fontSize: '60px',
+                            alignItems: 'center',
+                            border: '1px solid #E5EAF2',
+                            backgroundColor: '#F5F5F5',
+                            borderRadius: '10px',
                           }}
-                        />
-                      </Stack>
-                    )}
-                    <Stack
-                      sx={{
-                        width: '100%',
-                        textAlign: 'center',
-                        backgroundColor: '#fff',
-                        padding: '10px',
-                        fontWeight: 'bold',
-                        borderBottomLeftRadius: '10px',
-                        borderBottomRightRadius: '10px',
-                      }}
-                    >
-                      {widgetItem.title}
-                    </Stack>
-                  </Stack>
-                </CustomLink>
-              );
-            })}
-          </Stack>
+                        >
+                          {Icon && (
+                            <Stack sx={{ padding: '20px' }}>
+                              <Icon
+                                sx={{
+                                  fontSize: '60px',
+                                }}
+                              />
+                            </Stack>
+                          )}
+                          <Stack
+                            sx={{
+                              width: '100%',
+                              textAlign: 'center',
+                              backgroundColor: '#fff',
+                              padding: '10px',
+                              fontWeight: 'bold',
+                              borderBottomLeftRadius: '10px',
+                              borderBottomRightRadius: '10px',
+                            }}
+                          >
+                            {widgetItem.title}
+                          </Stack>
+                        </Stack>
+                      </CustomLink>
+                    );
+                  })}
+                </Stack>
+              </>
+            );
+          })}
         </Stack>
       </StyledWrapper>
     </Page>

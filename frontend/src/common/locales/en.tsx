@@ -511,6 +511,59 @@ const en = {
       </>
     ),
   },
+
+  //////////////////////////////////////
+  // Dialog
+  WidgetDialog: {
+    title: 'Dialog Widget Usage and Applications - FlutterGallery',
+    0: (
+      <>
+        Dialog Widget is used to display a popup on the screen.
+        <br />
+        This is useful for displaying important messages such as alerts and
+        confirmation messages.
+      </>
+    ),
+    '1_head': 'Basic Usage',
+    1: (
+      <>
+        In Flutter, you can call the Dialog using the <code>showDialog</code>{' '}
+        function.
+        <br />
+        If you want to close the Dialog, you can use{' '}
+        <code>Navigator.pop(context)</code> to do so.
+      </>
+    ),
+    '2_head': 'FullScreen',
+    2: (
+      <>
+        To display a full-screen dialog, you can use{' '}
+        <code>Dialog.fullscreen</code>.
+        <br />
+        Note that a "close button" is required to display the dialog in
+        fullscreen mode.
+      </>
+    ),
+    3: (
+      <>
+        <code>AlertDialog</code> is used to alert or confirm users.
+        <br />
+        It is not highly customizable, but it is simple and easy to use, and is
+        useful in situations where user confirmation is required.
+      </>
+    ),
+    '4_head': 'Animation',
+    4: (
+      <>
+        <code>showGeneralDialog</code> is used to implement advanced dialogs or
+        to create dialogs with a specific design.
+        <br />
+        <code>transitionBuilder</code> is a function that controls the animation
+        of a dialog when it is shown and hidden, and can implement various
+        animations such as scaling and fading.
+      </>
+    ),
+  },
 } as const;
 
 export default en;

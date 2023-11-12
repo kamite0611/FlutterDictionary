@@ -2,6 +2,7 @@ import {
   Brightness4Rounded,
   CheckBoxRounded,
   HighlightAltRounded,
+  LayersRounded,
   LinearScale,
   RadioButtonChecked,
   SmartButtonRounded,
@@ -38,6 +39,8 @@ export const NAV_CONFIG: NavConfig[] = [
     title: 'Widgets',
     link: '/widgets',
     items: [
+      /////////////////////////////////////
+      /** INPUT */
       {
         subTitle: 'INPUTS',
         title: 'Button',
@@ -86,6 +89,43 @@ export const NAV_CONFIG: NavConfig[] = [
         link: '/widgets/ToggleButton',
         icon: Brightness4Rounded,
       },
+
+      /////////////////////////////////////
+      /** Utils */
+      {
+        subTitle: 'UTILS',
+        title: 'Dialog',
+        link: '/widgets/Dialog',
+        icon: LayersRounded,
+      },
     ],
   },
 ];
+
+export type NavConfigWithSubtitle = {
+  title: string;
+  link: string;
+  items: Record<string, NavConfigItem[]>;
+};
+
+export const ConfigWithSubtitle: NavConfigWithSubtitle[] = NAV_CONFIG.map(
+  (navConfig) => {
+    const subTItles: Record<string, NavConfigItem[]> = {};
+    navConfig.items.map((item) => {
+      const subTitle = item.subTitle || '';
+      const currentSubtitle = subTItles[subTitle];
+
+      if (!currentSubtitle) {
+        subTItles[subTitle] = [item];
+      }
+
+      if (currentSubtitle) {
+        subTItles[subTitle] = [...subTItles[subTitle], item];
+      }
+    });
+    return {
+      ...navConfig,
+      items: subTItles,
+    };
+  }
+);

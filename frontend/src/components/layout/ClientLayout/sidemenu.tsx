@@ -6,7 +6,13 @@ import { Box, Collapse, Drawer, Link, Stack } from '@mui/material';
 
 import { BreakpointChanger } from '@/components/functional';
 import { LogoWithTitle } from '@/components/parts';
-import { HEADER_HEIGHT, NAV_CONFIG, NavConfig, NavConfigItem } from '@/config';
+import {
+  ConfigWithSubtitle,
+  HEADER_HEIGHT,
+  NavConfigItem,
+  NavConfigWithSubtitle,
+} from '@/config';
+import { ibmPlex } from '@/libs/theme/overrides/CssBaseline';
 
 /**
  * 左メニュー
@@ -36,7 +42,7 @@ export const SideMenu = (props: {
             >
               <LogoWithTitle sx={{ padding: '10px' }} />
 
-              {NAV_CONFIG.map((NavConfig, i) => {
+              {ConfigWithSubtitle.map((NavConfig, i) => {
                 return (
                   <SideMenuCategory
                     key={i}
@@ -64,7 +70,7 @@ export const SideMenu = (props: {
               },
             })}
           >
-            {NAV_CONFIG.map((NavConfig, i) => {
+            {ConfigWithSubtitle.map((NavConfig, i) => {
               return (
                 <SideMenuCategory
                   key={i}
@@ -89,7 +95,7 @@ const SideMenuCategory = ({
   NavConfig,
   pathname,
 }: {
-  NavConfig: NavConfig;
+  NavConfig: NavConfigWithSubtitle;
   pathname: string;
 }) => {
   const [open, setOpen] = useState(true);
@@ -129,11 +135,72 @@ const SideMenuCategory = ({
         {NavConfig.title}
       </Stack>
       <Collapse in={open}>
-        {NavConfig.items.map((NavConfigItem, i) => {
-          return (
-            <SideMenuItem key={i} item={NavConfigItem} pathname={pathname} />
-          );
-        })}
+        <Stack gap="5px">
+          {Object.entries(NavConfig.items).map(([subtitle, items]) => {
+            return (
+              <Stack
+                key={subtitle}
+                sx={{
+                  position: 'relative',
+                  my: '5px',
+                }}
+              >
+                <Stack
+                  sx={{
+                    fontFamily: ibmPlex.style.fontFamily,
+                    color: '#6B7A90',
+                    fontSize: '11px',
+                    fontWeight: '700',
+                    padding: '5px',
+                    paddingLeft: '40px',
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    position: 'relative',
+
+                    /** 線 */
+                    '&:before': {
+                      content: '""',
+                      display: 'block',
+                      position: 'absolute',
+                      zIndex: '1',
+                      bottom: '0',
+                      left: '9.5px',
+                      height: '10px',
+                      width: '1px',
+                      opacity: '1',
+                      background: 'rgb(229, 234, 242)',
+                    },
+
+                    /** サブタイトルの丸 */
+                    '&:after': {
+                      content: '""',
+                      display: 'block',
+                      position: 'absolute',
+                      zIndex: '5',
+                      left: '6px',
+                      height: '8px',
+                      width: '8px',
+                      borderRadius: '2px',
+                      opacity: '1',
+                      background: 'rgba(243, 246, 249, 0.5)',
+                      border: '1px solid',
+                      borderColor: '#DAE2ED',
+                    },
+                  }}
+                >
+                  {subtitle}
+                </Stack>
+                {items.map((NavConfigItem, i) => (
+                  <SideMenuItem
+                    key={i}
+                    item={NavConfigItem}
+                    pathname={pathname}
+                  />
+                ))}
+              </Stack>
+            );
+          })}
+        </Stack>
       </Collapse>
     </>
   );

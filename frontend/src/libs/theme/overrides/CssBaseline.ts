@@ -1,4 +1,9 @@
-import { Noto_Sans_JP, Roboto, Roboto_Mono } from 'next/font/google';
+import {
+  IBM_Plex_Sans,
+  Noto_Sans_JP,
+  Roboto,
+  Roboto_Mono,
+} from 'next/font/google';
 
 import { Theme } from '@mui/material/styles';
 
@@ -20,6 +25,13 @@ const roboto = Roboto({
   subsets: ['latin'],
 });
 
+/** サブタイトルのフォント */
+export const ibmPlex = IBM_Plex_Sans({
+  weight: ['700'],
+  subsets: ['latin'],
+});
+
+/** コードのフォント */
 export const robotoMono = Roboto_Mono({
   weight: '600',
   subsets: ['latin'],
