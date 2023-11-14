@@ -1,3 +1,5 @@
+import { AlertTitle } from '@mui/material';
+
 import { CustomLink } from '@/components/parts';
 
 const ja = {
@@ -544,6 +546,62 @@ const ja = {
         <br />
         <code>transitionBuilder</code>
         はダイアログの表示および非表示時のアニメーションを制御する関数であり、スケーリングやフェードなど様々なアニメーションを実装することができます。
+      </>
+    ),
+  },
+
+  //////////////////////////////////////
+  // Tooltip
+  WidgetTooltip: {
+    title: 'Tooltip Widgetの使い方と応用例 - Flutter図鑑',
+    0: (
+      <>
+        Tooltip
+        Widgetは特定のユニットに対してユーザーに情報を提供するために使用されます。
+        <br />
+        補足情報がある時などユーザーに伝えたい情報が場合に有効です。
+      </>
+    ),
+    '1_head': '基本的な使用方法',
+    1: (
+      <>
+        Flutterでは<code>Tooltip</code>
+        を使用して、ツールチップを表示することができます。
+        <br />
+        <code>message</code>
+        に任意のテキストを指定し、<code>child</code>
+        に対象にしたいwidgetを指定します。
+      </>
+    ),
+    '2_head': '表示位置の変更',
+    2: (
+      <>
+        <code>verticalOffset</code>
+        の値を調整することで、縦方向にツールチップを表示する位置を調整できます。
+        <br />
+        また、<code>margin</code>
+        の値を調整し、左右方向にも調整することが可能です。
+      </>
+    ),
+    '2_alert': (
+      <>
+        <AlertTitle>Tooltipを右または左に表示する場合の注意点</AlertTitle>
+        `margin`を指定した場合、childで指定したボタンにて
+        <b>onPressedが発火しない</b>問題を確認しました。
+        <br />
+        使用する場合は、ご自身の環境で十分にテストし使用を検討してください。
+        <br />
+        <br />
+        こちらの問題の解決法については、現在調査中です。
+      </>
+    ),
+    '3_head': '見た目の調整',
+    3: (
+      <>
+        <code>decoration</code>
+        プロパティを使用して、背景色や枠線などのスタイルを変更することができます。
+        <br />
+        そのほかにも様々なプロパティが用意されており、柔軟に見た目を変更することが可能です。
       </>
     ),
   },

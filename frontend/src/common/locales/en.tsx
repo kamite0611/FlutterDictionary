@@ -1,3 +1,5 @@
+import { AlertTitle } from '@mui/material';
+
 import { CustomLink } from '@/components/parts';
 
 const en = {
@@ -561,6 +563,65 @@ const en = {
         <code>transitionBuilder</code> is a function that controls the animation
         of a dialog when it is shown and hidden, and can implement various
         animations such as scaling and fading.
+      </>
+    ),
+  },
+
+  //////////////////////////////////////
+  // Tooltip
+  WidgetTooltip: {
+    title: 'Tooltip Widgetの使い方と応用例 - Flutter図鑑',
+    0: (
+      <>
+        The Tooltip Widget is used to provide information to the user for a
+        specific unit.
+        <br />
+        This is useful when there is additional information that you wish to
+        convey to the user.
+      </>
+    ),
+    '1_head': 'Basic Usage',
+    1: (
+      <>
+        In Flutter, tooltips can be displayed using <code>Tooltip</code>.
+        <br />
+        Specify any text in <code>message</code> and the widget you wish to
+        target in <code>child</code>.
+      </>
+    ),
+    '2_head': 'Position',
+    2: (
+      <>
+        By adjusting the value of <code>verticalOffset</code>, the position of
+        the tooltip in the vertical direction can be adjusted.
+        <br />
+        It is also possible to adjust the left and right directions by adjusting
+        the value of <code>margin</code>.
+      </>
+    ),
+    '2_alert': (
+      <>
+        <AlertTitle>
+          Note when Tooltip is displayed on the right or left
+        </AlertTitle>
+        We have confirmed that <b>onPressed does not fire</b> on buttons
+        specified with `child` when `margin` is specified.
+        <br />
+        If you wish to use this function, please test it thoroughly in your
+        environment and consider using it.
+        <br />
+        <br />
+        We are currently investigating a solution to this problem.
+      </>
+    ),
+    '3_head': 'Styling',
+    3: (
+      <>
+        The <code>decoration</code> property can be used to change the style of
+        the background color, border, etc.
+        <br />
+        Various other properties are also available to flexibly change the
+        appearance.
       </>
     ),
   },

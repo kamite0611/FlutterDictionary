@@ -38,6 +38,9 @@ import 'package:flutter_demos/views/widgets/ToggleButton/Color.dart';
 import 'package:flutter_demos/views/widgets/ToggleButton/Icon.dart';
 import 'package:flutter_demos/views/widgets/ToggleButton/Single.dart';
 import 'package:flutter_demos/views/widgets/ToggleButton/Size.dart';
+import 'package:flutter_demos/views/widgets/Tooltip/Basic.dart';
+import 'package:flutter_demos/views/widgets/Tooltip/Position.dart';
+import 'package:flutter_demos/views/widgets/Tooltip/Style.dart';
 
 void main() {
   runApp(const MyApp());
@@ -138,6 +141,11 @@ const List<Route> routes = [
   Route(path: "/widgets/Dialog/FullScreen", widget: WidgetsDialogFullScreen()),
   Route(path: "/widgets/Dialog/Animate", widget: WidgetsDialogAnimate()),
   Route(path: "/widgets/Dialog/Alert", widget: WidgetsDialogAlert()),
+
+  // Tooltip
+  Route(path: "/widgets/Tooltip/Basic", widget: WidgetsTooltipBasic()),
+  Route(path: "/widgets/Tooltip/Position", widget: WidgetsTooltipPosition()),
+  Route(path: "/widgets/Tooltip/Style", widget: WidgetsTooltipStyle()),
 ];
 
 class Material3App extends StatelessWidget {
