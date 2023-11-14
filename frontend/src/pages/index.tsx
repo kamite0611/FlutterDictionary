@@ -1,4 +1,4 @@
-import { Stack, Typography, styled } from '@mui/material';
+import { Box, Stack, Typography, styled } from '@mui/material';
 
 import { useLocale } from '@/common/hooks';
 import { Page } from '@/components/functional';
@@ -77,7 +77,7 @@ export default function Home() {
 
           {Object.entries(widgetItems).map(([subTitle, items]) => {
             return (
-              <>
+              <Box key={subTitle}>
                 <Stack
                   sx={{
                     color: '#6B7A90',
@@ -142,7 +142,7 @@ export default function Home() {
                     );
                   })}
                 </Stack>
-              </>
+              </Box>
             );
           })}
         </Stack>

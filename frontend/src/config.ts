@@ -98,6 +98,12 @@ export const NAV_CONFIG: NavConfig[] = [
         link: '/widgets/Dialog',
         icon: LayersRounded,
       },
+      // {
+      //   subTitle: 'UTILS',
+      //   title: 'Tooltip',
+      //   link: '/widgets/Tooltip',
+      //   icon: TextSnippetRounded,
+      // },
     ],
   },
 ];
