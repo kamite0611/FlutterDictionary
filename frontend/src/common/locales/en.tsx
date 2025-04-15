@@ -15,8 +15,8 @@ const en = {
       operation: (
         <>
           This service is operated by
-          <CustomLink href="https://twitter.com/kamite0611" target="_blank">
-            @kamite0611
+          <CustomLink href="https://ichis.jp" target="_blank">
+            ichis inc.
           </CustomLink>
         </>
       ),
