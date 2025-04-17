@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://www.flutter-gallery.com</loc><lastmod>2025-04-17T14:05:26.326Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.flutter-gallery.com/widgets/Button</loc><lastmod>2025-04-17T14:05:26.327Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.flutter-gallery.com/widgets/Checkbox</loc><lastmod>2025-04-17T14:05:26.327Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.flutter-gallery.com/widgets/Dialog</loc><lastmod>2025-04-17T14:05:26.327Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.flutter-gallery.com/widgets/Radio</loc><lastmod>2025-04-17T14:05:26.327Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.flutter-gallery.com/widgets/Select</loc><lastmod>2025-04-17T14:05:26.327Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.flutter-gallery.com/widgets/Slider</loc><lastmod>2025-04-17T14:05:26.327Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.flutter-gallery.com/widgets/Switch</loc><lastmod>2025-04-17T14:05:26.327Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.flutter-gallery.com/widgets/TextField</loc><lastmod>2025-04-17T14:05:26.327Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.flutter-gallery.com/widgets/ToggleButton</loc><lastmod>2025-04-17T14:05:26.327Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.flutter-gallery.com/widgets/Tooltip</loc><lastmod>2025-04-17T14:05:26.327Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.flutter-gallery.com</loc><lastmod>2025-04-17T14:12:33.334Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.flutter-gallery.com/widgets/Button</loc><lastmod>2025-04-17T14:12:33.335Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.flutter-gallery.com/widgets/Checkbox</loc><lastmod>2025-04-17T14:12:33.335Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.flutter-gallery.com/widgets/Dialog</loc><lastmod>2025-04-17T14:12:33.335Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.flutter-gallery.com/widgets/Radio</loc><lastmod>2025-04-17T14:12:33.335Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.flutter-gallery.com/widgets/Select</loc><lastmod>2025-04-17T14:12:33.335Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.flutter-gallery.com/widgets/Slider</loc><lastmod>2025-04-17T14:12:33.335Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.flutter-gallery.com/widgets/Switch</loc><lastmod>2025-04-17T14:12:33.335Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.flutter-gallery.com/widgets/TextField</loc><lastmod>2025-04-17T14:12:33.335Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.flutter-gallery.com/widgets/ToggleButton</loc><lastmod>2025-04-17T14:12:33.335Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.flutter-gallery.com/widgets/Tooltip</loc><lastmod>2025-04-17T14:12:33.335Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>
