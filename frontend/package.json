@@ -6,10 +6,14 @@
     "dev": "next dev",
     "build": "next build && next-sitemap --config sitemap.config.js",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "pages:build": "npx @cloudflare/next-on-pages",
+    "preview": "npm run pages:build && wrangler pages dev",
+    "deploy": "npm run pages:build && wrangler pages deploy",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv env.d.ts"
   },
   "volta": {
-    "node": "18.16.0",
+    "node": "22.12.0",
     "yarn": "1.22.19"
   },
   "dependencies": {
@@ -42,6 +46,8 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-unused-imports": "^2.0.0",
     "prettier": "^2.8.8",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vercel": "^41.6.1",
+    "wrangler": "^4.12.0"
   }
 }
