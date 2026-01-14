@@ -14,8 +14,8 @@ const ja = {
       operation: (
         <>
           このサービスは
-          <CustomLink href="https://ichis.jp" target="_blank">
-            ichis株式会社
+          <CustomLink href="https://twitter.com/kamite0611" target="_blank">
+            @kamite0611
           </CustomLink>
           が運営しています
         </>
